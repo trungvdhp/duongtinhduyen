@@ -1,0 +1,14 @@
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.exe.config
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.exe
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.pdb
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDangNhap.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDoiMatKhau.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmKetNoiCSDL.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmLoaiNguoiDung.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmNguoiDung.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmMain.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.Properties.Resources.resources
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.csproj.GenerateResource.Cache
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.exe
+C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.pdb
