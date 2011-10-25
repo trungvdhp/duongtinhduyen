@@ -35,7 +35,8 @@ namespace DuongTinhDuyen
         {
             if (dgvLoaiNguoiDung.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = false;
-
+            else if (dgvLoaiNguoiDung.CurrentRow.Cells[0].Value.ToString() == "LN001")
+                MessageBox.Show("Để an toàn bạn không được phép xóa nhóm người dùng này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 bindingNavigatorLoaiNguoiDung.BindingSource.RemoveCurrent();

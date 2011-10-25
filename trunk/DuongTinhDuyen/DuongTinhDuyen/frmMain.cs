@@ -39,7 +39,13 @@ namespace DuongTinhDuyen
                 ketNoiCSDLToolStripMenuItem.Enabled = false;
                 DataConnect.DongKetNoi();
                 lblTinhTrangKetNoi.Text = "  Đã kết nối đến cơ sở dữ liệu " + Settings.Default.Database;
-                dangNhapToolStripMenuItem.PerformClick();
+                if (m_FrmDangNhap == null || m_FrmDangNhap.IsDisposed)
+                    m_FrmDangNhap = new frmDangNhap();
+                if (m_FrmDangNhap.ShowDialog() == DialogResult.OK)
+                {
+                    lblNguoiDangNhap.Text = "Người đăng nhập: " + Utilities.NguoiDung.TenND;
+                    PhanQuyen(Utilities.NguoiDung.LoaiND.MaLoai);
+                }
             }
             else
             {
@@ -84,18 +90,16 @@ namespace DuongTinhDuyen
         #region Phân quyền
         private void QuyenNguoiDung()
         {
-            dangNhapToolStripMenuItem.Enabled = true;
-            dangXuatToolStripMenuItem.Enabled = false;
-            doiMatKhauToolStripMenuItem.Enabled = false;
+            dangNhapToolStripMenuItem.Enabled = false;
+            dangXuatToolStripMenuItem.Enabled = true;
+            doiMatKhauToolStripMenuItem.Enabled = true;
             nguoiDungToolStripMenuItem.Enabled = false;
             loaiNguoiDungToolStripMenuItem.Enabled = false;
         }
 
         private void QuyenAdmin()
         {
-            dangNhapToolStripMenuItem.Enabled = false;
-            dangXuatToolStripMenuItem.Enabled = true;
-            doiMatKhauToolStripMenuItem.Enabled = true;
+            QuyenNguoiDung();
             nguoiDungToolStripMenuItem.Enabled = true;
             loaiNguoiDungToolStripMenuItem.Enabled = true;
         }
@@ -170,6 +174,8 @@ namespace DuongTinhDuyen
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblNguoiDangNhap.Text = "Chưa đăng nhập";
+            tabControl1.TabPages.Clear();
+            btnDongTab.Visible = tabControl1.Visible = dongTatCaTrangKhacToolStripMenuItem.Visible = dongTatCaToolStripMenuItem.Visible = false;
             QuyenNguoiDung();
         }
 
