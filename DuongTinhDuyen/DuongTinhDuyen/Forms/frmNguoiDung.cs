@@ -31,7 +31,9 @@ namespace DuongTinhDuyen
         {
             if (dgvNguoiDung.RowCount > 0)
             {
-                if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (dgvNguoiDung.CurrentRow.Cells[2].Value.ToString() == "LN001")
+                    MessageBox.Show("Để an toàn bạn không được phép xóa người dùng này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     bindingNavigatorNguoiDung.BindingSource.RemoveCurrent();
                 }
