@@ -256,6 +256,11 @@ namespace DuongTinhDuyen
 
         }
         #endregion
+
+        private void nutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTab(new frmNut());
+        }
         #endregion
     }
 }

@@ -58,6 +58,8 @@
             this.lblDongHo = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnDongTab = new System.Windows.Forms.Button();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +70,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.heThongToolStripMenuItem,
             this.hienThiToolStripMenuItem,
-            this.giupDoToolStripMenuItem});
+            this.giupDoToolStripMenuItem,
+            this.quảnLýToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(744, 25);
@@ -331,6 +334,21 @@
             this.btnDongTab.Visible = false;
             this.btnDongTab.Click += new System.EventHandler(this.btnDongTab_Click);
             // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nutToolStripMenuItem});
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
+            this.quảnLýToolStripMenuItem.Text = "Quản lý";
+            // 
+            // nutToolStripMenuItem
+            // 
+            this.nutToolStripMenuItem.Name = "nutToolStripMenuItem";
+            this.nutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nutToolStripMenuItem.Text = "Nút";
+            this.nutToolStripMenuItem.Click += new System.EventHandler(this.nutToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +407,8 @@
         private System.Windows.Forms.ToolStripMenuItem huyKetNoiCSDLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dongTatCaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loaiNguoiDungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nutToolStripMenuItem;
     }
 }
 
