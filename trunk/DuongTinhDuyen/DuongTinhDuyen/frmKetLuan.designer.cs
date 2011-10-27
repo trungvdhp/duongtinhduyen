@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKetLuan));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvKetLuan = new System.Windows.Forms.DataGridView();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorNut = new System.Windows.Forms.BindingNavigator(this.components);
@@ -230,10 +231,15 @@
             // 
             this.colMaKL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colMaKL.DataPropertyName = "MaKL";
-            this.colMaKL.HeaderText = "Mã kết luận";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colMaKL.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colMaKL.FillWeight = 60F;
+            this.colMaKL.HeaderText = "Mã KL";
             this.colMaKL.MaxInputLength = 6;
             this.colMaKL.Name = "colMaKL";
             this.colMaKL.ReadOnly = true;
+            this.colMaKL.ToolTipText = "Mã kết luận";
+            this.colMaKL.Width = 60;
             // 
             // colNoiDung
             // 

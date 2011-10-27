@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNut));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNut = new System.Windows.Forms.DataGridView();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorNut = new System.Windows.Forms.BindingNavigator(this.components);
@@ -231,10 +232,14 @@
             // 
             this.colMaNut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colMaNut.DataPropertyName = "MaNut";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colMaNut.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colMaNut.FillWeight = 60F;
             this.colMaNut.HeaderText = "Mã nút";
             this.colMaNut.MaxInputLength = 6;
             this.colMaNut.Name = "colMaNut";
             this.colMaNut.ReadOnly = true;
+            this.colMaNut.Width = 60;
             // 
             // colNoiDung
             // 

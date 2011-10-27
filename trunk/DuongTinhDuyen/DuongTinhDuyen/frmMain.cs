@@ -283,6 +283,11 @@ namespace DuongTinhDuyen
         {
             AddTab(new frmKetLuan());
         }
+
+        private void luatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTab(new frmLuat());
+        }
         #endregion
         #endregion
     }

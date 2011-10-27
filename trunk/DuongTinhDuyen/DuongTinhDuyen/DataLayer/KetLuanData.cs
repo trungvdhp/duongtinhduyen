@@ -28,7 +28,7 @@ namespace DuongTinhDuyen.DataLayer
 
         public bool LuuKetLuan()
         {
-            return m_KetLuanData.ExecuteNoneQuery() > 0;
+            return m_KetLuanData.ExecuteNoneQuery() == 0;
         }
     }
 }
