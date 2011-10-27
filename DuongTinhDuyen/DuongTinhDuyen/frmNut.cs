@@ -34,6 +34,8 @@ namespace DuongTinhDuyen
         {
             if (dgvNut.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = false;
+            else if (dgvNut.CurrentRow.Cells[0].Value.ToString() != "" && m_NutCtrl.DaSuDungNut(Convert.ToInt32(dgvNut.CurrentRow.Cells[0].Value.ToString())))
+                    MessageBox.Show("Không thể xóa nút này vì nó đã được sử dụng trong các Luật", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 bindingNavigatorNut.BindingSource.RemoveCurrent();
@@ -75,6 +77,8 @@ namespace DuongTinhDuyen
             {
                 bindingNavigatorPositionItem.Focus();
                 m_NutCtrl.LuuNut();
+                frmNut_Load(sender, e);
+                bindingNavigatorNut.BindingSource.MoveLast();
             }
         }
         #endregion

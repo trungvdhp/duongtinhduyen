@@ -9,7 +9,7 @@ namespace DuongTinhDuyen.Controller
     public class KetLuanCtrl
     {
         KetLuanData m_KetLuanData = new KetLuanData();
-
+        LuatData m_LuatData = new LuatData();
         #region Hien thi ComboBox
         public void HienThiComboBox(ComboBox comboBox)
         {
@@ -40,7 +40,22 @@ namespace DuongTinhDuyen.Controller
             dGV.DataSource = bS;
         }
         #endregion
-
+        #region Kiểm tra xem 1 kết luận có được sử dụng trong các Luật hay không?
+        public bool DaSuDungKetLuan(int maKL)
+        {
+            DataTable dt = m_LuatData.LayDsLuat();
+            foreach (DataRow dr in dt.Rows)
+            {
+                String s = dr[2].ToString();
+                String[] s1 = s.Split(new char[]{'&','|'});
+                foreach (String s2 in s1)
+                {
+                    if (Math.Abs(Convert.ToInt32(s2)) == maKL) return true;
+                }
+            }
+            return false;
+        }
+        #endregion
         #region Them moi
         public DataRow ThemDongMoi()
         {

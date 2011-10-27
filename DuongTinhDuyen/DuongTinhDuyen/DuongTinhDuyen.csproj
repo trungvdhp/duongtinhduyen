@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\LuatInfo.cs" />
     <Compile Include="Bussiness\KetLuanInfo.cs" />
     <Compile Include="Bussiness\NutInfo.cs" />
     <Compile Include="Bussiness\LoaiNguoiDungInfo.cs" />
@@ -83,10 +84,12 @@
       <DependentUpon>frmKetNoiCSDL.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Utilities.cs" />
+    <Compile Include="Controller\LuatCtrl.cs" />
     <Compile Include="Controller\KetLuanCtrl.cs" />
     <Compile Include="Controller\NutCtrl.cs" />
     <Compile Include="Controller\LoaiNguoiDungCtrl.cs" />
     <Compile Include="Controller\NguoiDungCtrl.cs" />
+    <Compile Include="DataLayer\LuatData.cs" />
     <Compile Include="DataLayer\KetLuanData.cs" />
     <Compile Include="frmKetLuan.cs">
       <SubType>Form</SubType>
@@ -108,6 +111,12 @@
     </Compile>
     <Compile Include="Forms\frmNguoiDung.designer.cs">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuat.Designer.cs">
+      <DependentUpon>frmLuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNut.cs">
       <SubType>Form</SubType>
@@ -145,6 +154,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuat.resx">
+      <DependentUpon>frmLuat.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNut.resx">

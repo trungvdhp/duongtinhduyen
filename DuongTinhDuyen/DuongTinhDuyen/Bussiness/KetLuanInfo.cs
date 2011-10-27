@@ -12,8 +12,8 @@ namespace DuongTinhDuyen.Bussiness
 
         }
 
-        private String m_MaKL;
-        public String MaNut
+        private int m_MaKL;
+        public int MaNut
         {
             get { return m_MaKL; }
             set { m_MaKL = value; }

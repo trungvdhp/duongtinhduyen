@@ -1,17 +1,3 @@
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.exe.config
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.exe
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.pdb
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDangNhap.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDoiMatKhau.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmKetNoiCSDL.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmLoaiNguoiDung.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmNguoiDung.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmMain.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.Properties.Resources.resources
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.csproj.GenerateResource.Cache
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.exe
-C:\Users\CENTRE\AppData\Local\Temporary Projects\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.pdb
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\bin\x86\Debug\DuongTinhDuyen.exe.config
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.exe
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.pdb
@@ -21,10 +7,11 @@ E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTin
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDangNhap.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmDoiMatKhau.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmKetNoiCSDL.resources
+E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmKetLuan.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmLoaiNguoiDung.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmNguoiDung.resources
+E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmLuat.resources
+E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmNut.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmMain.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.Properties.Resources.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.csproj.GenerateResource.Cache
-E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmNut.resources
-E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmKetLuan.resources

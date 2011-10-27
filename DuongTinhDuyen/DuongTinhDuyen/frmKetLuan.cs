@@ -34,6 +34,8 @@ namespace DuongTinhDuyen
         {
             if (dgvKetLuan.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = false;
+            else if (dgvKetLuan.CurrentRow.Cells[0].Value.ToString() != "" && m_KetLuanCtrl.DaSuDungKetLuan(Convert.ToInt32(dgvKetLuan.CurrentRow.Cells[0].Value.ToString())))
+                MessageBox.Show("Không thể xóa kết luận này vì nó đã được sử dụng trong các Luật", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (MessageBox.Show("Bạn có chắc chắn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 bindingNavigatorNut.BindingSource.RemoveCurrent();
@@ -75,6 +77,8 @@ namespace DuongTinhDuyen
             {
                 bindingNavigatorPositionItem.Focus();
                 m_KetLuanCtrl.LuuKetLuan();
+                frmKetLuan_Load(sender, e);
+                bindingNavigatorNut.BindingSource.MoveLast();
             }
         }
         #endregion
