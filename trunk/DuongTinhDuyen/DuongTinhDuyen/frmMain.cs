@@ -29,7 +29,7 @@ namespace DuongTinhDuyen
         #region Load
         private void frmMain_Load(object sender, System.EventArgs e)
         {
-            QuyenNguoiDung();
+            QuyenChuaDangNhap();
             timer1.Start();
             DataConnect.LayChuoiKetNoi(Settings.Default.Server, Settings.Default.Database, Settings.Default.Username,
             Settings.Default.Password, Settings.Default.Security);
@@ -46,6 +46,7 @@ namespace DuongTinhDuyen
                     lblNguoiDangNhap.Text = "Người đăng nhập: " + Utilities.NguoiDung.TenND;
                     PhanQuyen(Utilities.NguoiDung.LoaiND.MaLoai);
                 }
+                huyKetNoiCSDLToolStripMenuItem.Enabled = true;
             }
             else
             {
@@ -88,20 +89,36 @@ namespace DuongTinhDuyen
         #endregion
 
         #region Phân quyền
+        private void QuyenChuaDangNhap()
+        {
+            dangNhapToolStripMenuItem.Enabled = true;
+            dangXuatToolStripMenuItem.Enabled = false;
+            doiMatKhauToolStripMenuItem.Enabled = false;
+            nguoiDungToolStripMenuItem.Visible = false;
+            loaiNguoiDungToolStripMenuItem.Visible = false;
+            toolStripSeparator9.Visible = false;
+            quanLyToolStripMenuItem.Visible = false;
+        }
         private void QuyenNguoiDung()
         {
             dangNhapToolStripMenuItem.Enabled = false;
             dangXuatToolStripMenuItem.Enabled = true;
             doiMatKhauToolStripMenuItem.Enabled = true;
-            nguoiDungToolStripMenuItem.Enabled = false;
-            loaiNguoiDungToolStripMenuItem.Enabled = false;
+            nguoiDungToolStripMenuItem.Visible = false;
+            loaiNguoiDungToolStripMenuItem.Visible = false;
+            toolStripSeparator9.Visible = false;
+            quanLyToolStripMenuItem.Visible = false;
         }
 
         private void QuyenAdmin()
         {
-            QuyenNguoiDung();
-            nguoiDungToolStripMenuItem.Enabled = true;
-            loaiNguoiDungToolStripMenuItem.Enabled = true;
+            dangNhapToolStripMenuItem.Enabled = false;
+            dangXuatToolStripMenuItem.Enabled = true;
+            doiMatKhauToolStripMenuItem.Enabled = true;
+            nguoiDungToolStripMenuItem.Visible = true;
+            loaiNguoiDungToolStripMenuItem.Visible = true;
+            toolStripSeparator9.Visible = true;
+            quanLyToolStripMenuItem.Visible = true;
         }
 
         private void PhanQuyen(string loaiND)
@@ -176,7 +193,8 @@ namespace DuongTinhDuyen
             lblNguoiDangNhap.Text = "Chưa đăng nhập";
             tabControl1.TabPages.Clear();
             btnDongTab.Visible = tabControl1.Visible = dongTatCaTrangKhacToolStripMenuItem.Visible = dongTatCaToolStripMenuItem.Visible = false;
-            QuyenNguoiDung();
+            QuyenChuaDangNhap();
+
         }
 
         private void doiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
@@ -256,11 +274,16 @@ namespace DuongTinhDuyen
 
         }
         #endregion
-
+        #region Quản lý
         private void nutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddTab(new frmNut());
         }
+        private void ketLuanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTab(new frmKetLuan());
+        }
+        #endregion
         #endregion
     }
 }
