@@ -98,6 +98,7 @@ namespace DuongTinhDuyen
             loaiNguoiDungToolStripMenuItem.Visible = false;
             toolStripSeparator9.Visible = false;
             quanLyToolStripMenuItem.Visible = false;
+            chuyenGiaToolStripMenuItem.Visible = false;
         }
         private void QuyenNguoiDung()
         {
@@ -108,6 +109,7 @@ namespace DuongTinhDuyen
             loaiNguoiDungToolStripMenuItem.Visible = false;
             toolStripSeparator9.Visible = false;
             quanLyToolStripMenuItem.Visible = false;
+            chuyenGiaToolStripMenuItem.Visible = true;
         }
 
         private void QuyenAdmin()
@@ -119,6 +121,7 @@ namespace DuongTinhDuyen
             loaiNguoiDungToolStripMenuItem.Visible = true;
             toolStripSeparator9.Visible = true;
             quanLyToolStripMenuItem.Visible = true;
+            chuyenGiaToolStripMenuItem.Visible = true;
         }
 
         private void PhanQuyen(string loaiND)
@@ -287,6 +290,12 @@ namespace DuongTinhDuyen
         private void luatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddTab(new frmLuat());
+        }
+        #endregion
+        #region Chuyên gia  
+        private void chuyenGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTab(new frmChuyenGia());
         }
         #endregion
         #endregion

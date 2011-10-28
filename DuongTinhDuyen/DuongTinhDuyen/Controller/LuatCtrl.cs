@@ -37,9 +37,5 @@ namespace DuongTinhDuyen.Controller
             return m_LuatData.LuuLuat();
         }
         #endregion
-        public void LayDong()
-        {
-            m_LuatData.LayDong();
-        }
     }
 }

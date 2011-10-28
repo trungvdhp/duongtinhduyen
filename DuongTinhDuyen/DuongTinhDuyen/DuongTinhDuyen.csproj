@@ -89,6 +89,12 @@
     <Compile Include="Controller\NutCtrl.cs" />
     <Compile Include="Controller\LoaiNguoiDungCtrl.cs" />
     <Compile Include="Controller\NguoiDungCtrl.cs" />
+    <Compile Include="frmChuyenGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChuyenGia.Designer.cs">
+      <DependentUpon>frmChuyenGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\LuatData.cs" />
     <Compile Include="DataLayer\KetLuanData.cs" />
     <Compile Include="frmKetLuan.cs">
@@ -142,6 +148,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\frmKetNoiCSDL.resx">
       <DependentUpon>frmKetNoiCSDL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChuyenGia.resx">
+      <DependentUpon>frmChuyenGia.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKetLuan.resx">
