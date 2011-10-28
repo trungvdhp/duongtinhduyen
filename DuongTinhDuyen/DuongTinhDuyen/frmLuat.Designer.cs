@@ -108,7 +108,7 @@
             this.dgvLuat.ReadOnly = true;
             this.dgvLuat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLuat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLuat.Size = new System.Drawing.Size(800, 379);
+            this.dgvLuat.Size = new System.Drawing.Size(800, 400);
             this.dgvLuat.TabIndex = 68;
             this.dgvLuat.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvLuat_DataError);
             this.dgvLuat.SelectionChanged += new System.EventHandler(this.dgvLuat_SelectionChanged);
@@ -294,7 +294,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 410);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 431);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -306,7 +306,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvKetLuan);
             this.splitContainer1.Panel2.Controls.Add(this.bindingNavigatorKetLuan);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 190);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 169);
             this.splitContainer1.SplitterDistance = 400;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 70;
@@ -331,10 +331,10 @@
             this.colTienTo,
             this.colNoiDungGiaThiet});
             this.dgvGiaThiet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGiaThiet.Location = new System.Drawing.Point(0, 0);
+            this.dgvGiaThiet.Location = new System.Drawing.Point(0, 31);
             this.dgvGiaThiet.Name = "dgvGiaThiet";
             this.dgvGiaThiet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvGiaThiet.Size = new System.Drawing.Size(400, 159);
+            this.dgvGiaThiet.Size = new System.Drawing.Size(400, 138);
             this.dgvGiaThiet.TabIndex = 72;
             this.dgvGiaThiet.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaThiet_CellValueChanged);
             this.dgvGiaThiet.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvGiaThiet_DataError);
@@ -370,12 +370,11 @@
             this.bindingNavigatorGiaThiet.CountItem = null;
             this.bindingNavigatorGiaThiet.CountItemFormat = "của {0}";
             this.bindingNavigatorGiaThiet.DeleteItem = null;
-            this.bindingNavigatorGiaThiet.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigatorGiaThiet.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorAddNewItemNut,
             this.bindingNavigatorDeleteItemGiaThiet,
             this.saveToolStripButtonGiaThiet});
-            this.bindingNavigatorGiaThiet.Location = new System.Drawing.Point(0, 159);
+            this.bindingNavigatorGiaThiet.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigatorGiaThiet.MoveFirstItem = null;
             this.bindingNavigatorGiaThiet.MoveLastItem = null;
             this.bindingNavigatorGiaThiet.MoveNextItem = null;
@@ -436,10 +435,10 @@
             this.colNoiDungKL,
             this.colHauTo});
             this.dgvKetLuan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKetLuan.Location = new System.Drawing.Point(0, 0);
+            this.dgvKetLuan.Location = new System.Drawing.Point(0, 31);
             this.dgvKetLuan.Name = "dgvKetLuan";
             this.dgvKetLuan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvKetLuan.Size = new System.Drawing.Size(399, 159);
+            this.dgvKetLuan.Size = new System.Drawing.Size(399, 138);
             this.dgvKetLuan.TabIndex = 74;
             this.dgvKetLuan.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetLuan_CellValueChanged);
             this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
@@ -474,12 +473,11 @@
             this.bindingNavigatorKetLuan.CountItem = null;
             this.bindingNavigatorKetLuan.CountItemFormat = "của {0}";
             this.bindingNavigatorKetLuan.DeleteItem = null;
-            this.bindingNavigatorKetLuan.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigatorKetLuan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorAddNewItemKetLuan,
             this.bindingNavigatorDeleteItemKetLuan,
             this.saveToolStripButtonKetLuan});
-            this.bindingNavigatorKetLuan.Location = new System.Drawing.Point(0, 159);
+            this.bindingNavigatorKetLuan.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigatorKetLuan.MoveFirstItem = null;
             this.bindingNavigatorKetLuan.MoveLastItem = null;
             this.bindingNavigatorKetLuan.MoveNextItem = null;
