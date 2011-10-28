@@ -61,14 +61,11 @@ namespace DuongTinhDuyen
         {
             foreach (DataGridViewRow row in dgv.Rows)
             {
-                if (row.Cells[cellString].Value != null)
+                if ((row.Cells[cellString].Value == null) || (row.Cells[cellString].Value != null && row.Cells[cellString].Value.ToString() == ""))
                 {
-                    String str = row.Cells[cellString].Value.ToString();
-                    if (str == "")
-                    {
-                        MessageBox.Show("Giá trị của ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
+                    MessageBox.Show("Giá trị của ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dgv.CurrentCell = row.Cells[cellString];
+                    return false;
                 }
             }
             return true;
@@ -101,6 +98,7 @@ namespace DuongTinhDuyen
         private void bindingNavigatorAddNewItemNut_Click(object sender, EventArgs e)
         {
             dgvGiaThiet.Rows.Add();
+            dgvGiaThiet.Rows[dgvGiaThiet.RowCount - 1].Cells[0].Value = "Có";
         }
 
         private void dgvGiaThiet_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -115,55 +113,64 @@ namespace DuongTinhDuyen
 
         private void dgvLuat_SelectionChanged(object sender, EventArgs e)
         {
-            dgvGiaThiet.Rows.Clear();
-            dgvKetLuan.Rows.Clear();
-            String[] giaThiet = dgvLuat.CurrentRow.Cells[1].Value.ToString().Split('&');
-            String[] ketLuan = dgvLuat.CurrentRow.Cells[2].Value.ToString().Split(new char[]{'&','|'});
-            for(int i=0;i<giaThiet.Length;++i)
+            try
             {
-                dgvGiaThiet.Rows.Add();
-                if (giaThiet[i] != "")
+                dgvGiaThiet.Rows.Clear();
+                dgvKetLuan.Rows.Clear();
+                String[] giaThiet = dgvLuat.CurrentRow.Cells[1].Value.ToString().Split('&');
+                String[] ketLuan = dgvLuat.CurrentRow.Cells[2].Value.ToString().Split(new char[] { '&', '|' });
+                for (int i = 0; i < giaThiet.Length; ++i)
                 {
-                    dgvGiaThiet.Rows[i].Cells[0].Value = Convert.ToInt32(giaThiet[i]) > 0 ? "Có" : "Không";
-                    dgvGiaThiet.Rows[i].Cells[1].Value = Math.Abs(Convert.ToInt32(giaThiet[i]));
+                    dgvGiaThiet.Rows.Add();
+                    dgvGiaThiet.Rows[i].Cells[0].Value = "Có";
+                    if (giaThiet[i] != "")
+                    {
+                        dgvGiaThiet.Rows[i].Cells[0].Value = Convert.ToInt32(giaThiet[i]) > 0 ? "Có" : "Không";
+                        dgvGiaThiet.Rows[i].Cells[1].Value = Math.Abs(Convert.ToInt32(giaThiet[i]));
+                    }
                 }
-            }
-            String s = dgvLuat.CurrentRow.Cells[2].Value.ToString();
-            int rid = 0;
-            if (ketLuan.Length ==1)
-            {
-                dgvKetLuan.Rows.Add();
-                if(ketLuan[rid] != "")
-                    dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                rid++;
-            }
-            for (int i = 0; i < s.Length; ++i)
-            {
-                if(s[i]=='&')
+                String s = dgvLuat.CurrentRow.Cells[2].Value.ToString();
+                int rid = 0;
+                if (ketLuan.Length == 1)
                 {
                     dgvKetLuan.Rows.Add();
                     dgvKetLuan.Rows[rid].Cells[1].Value = "và";
-                    dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                    if (ketLuan[rid] != "")
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
                     rid++;
                 }
-                else if (s[i] == '|')
+                for (int i = 0; i < s.Length; ++i)
+                {
+                    if (s[i] == '&')
+                    {
+                        dgvKetLuan.Rows.Add();
+                        dgvKetLuan.Rows[rid].Cells[1].Value = "và";
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                        rid++;
+                    }
+                    else if (s[i] == '|')
+                    {
+                        dgvKetLuan.Rows.Add();
+                        dgvKetLuan.Rows[rid].Cells[1].Value = "hoặc";
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                        rid++;
+                    }
+                }
+                if (ketLuan.Length > 1)
                 {
                     dgvKetLuan.Rows.Add();
-                    dgvKetLuan.Rows[rid].Cells[1].Value = "hoặc";
                     dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                    rid++;
                 }
             }
-            if (ketLuan.Length > 1)
+            catch
             {
-                dgvKetLuan.Rows.Add();
-                dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
             }
         }
 
         private void bindingNavigatorAddNewItemKetLuan_Click(object sender, EventArgs e)
         {
             dgvKetLuan.Rows.Add();
+            dgvKetLuan.Rows[dgvKetLuan.RowCount - 1].Cells[1].Value = "và";
         }
 
         private void bindingNavigatorDeleteItemKetLuan_Click(object sender, EventArgs e)
@@ -185,14 +192,54 @@ namespace DuongTinhDuyen
                 dgvGiaThiet.Rows.Remove(dgvGiaThiet.CurrentRow);
             }
         }
-
+        public bool DaCoGiaThiet(String maGiaThiet)
+        {
+            foreach (DataGridViewRow dr in dgvLuat.Rows)
+            {
+                if (dr.Cells[1].Value.ToString() == maGiaThiet)
+                    return true;
+            }
+            return false;
+        }
         private void saveToolStripButtonGiaThiet_Click(object sender, EventArgs e)
         {
+            dgvGiaThiet.EndEdit(DataGridViewDataErrorContexts.Commit);
+            if( KiemTraTruocKhiLuu(dgvGiaThiet,"colNoiDungGiaThiet") == true)
+            {
+                String strGiaThiet = "";
+                String strNut = "";
+                foreach (DataGridViewRow dr in dgvGiaThiet.Rows)
+                {
+                    strNut = (dr.Cells[0].Value.ToString() == "Có" ? "" : "-") + dr.Cells[1].Value.ToString();
+                    if (dr != dgvGiaThiet.Rows[0])
+                        strGiaThiet += "&" + strNut;
+                    else
+                        strGiaThiet += strNut;
+                }
+                if (DaCoGiaThiet(strGiaThiet) == true)
+                    MessageBox.Show("Giả thiết này đã có trong LUẬT!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    dgvLuat.CurrentRow.Cells[1].Value = strGiaThiet;
+                }
+            }
+            
         }
-
         private void saveToolStripButtonKetLuan_Click(object sender, EventArgs e)
         {
-
+            dgvKetLuan.EndEdit(DataGridViewDataErrorContexts.Commit);
+            if (KiemTraTruocKhiLuu(dgvKetLuan, "colNoiDungKL") == true)
+            {
+                String strKetLuan = "";
+                foreach (DataGridViewRow dr in dgvKetLuan.Rows)
+                {
+                    if (dr != dgvKetLuan.Rows[dgvKetLuan.RowCount-1])
+                        strKetLuan += dr.Cells[0].Value.ToString() + (dr.Cells[1].Value.ToString() == "và" ? "&" : "|");
+                    else
+                        strKetLuan += dr.Cells[0].Value.ToString();
+                }
+                dgvLuat.CurrentRow.Cells[2].Value = strKetLuan;
+            }
         }
 
         private void dgvGiaThiet_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -205,7 +252,7 @@ namespace DuongTinhDuyen
             {
                 for (int i = 0; i < dgvGiaThiet.RowCount; ++i)
                 {
-                    if (i != e.RowIndex && dgvGiaThiet.Rows[i].Cells[1].Value != null && dgvGiaThiet.Rows[i].Cells[1].Value.ToString() == dgvGiaThiet.CurrentCell.Value.ToString())
+                    if (i != dgvGiaThiet.CurrentCell.RowIndex && dgvGiaThiet.Rows[i].Cells[1].Value != null && dgvGiaThiet.Rows[i].Cells[1].Value.ToString() == dgvGiaThiet.CurrentCell.Value.ToString())
                     {
                         MessageBox.Show("Giả thiết hiện tại trùng với giả thiết tại hàng " + (i + 1), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvGiaThiet.CurrentCell.Value = "";
@@ -224,7 +271,7 @@ namespace DuongTinhDuyen
             {
                 for (int i = 0; i < dgvKetLuan.RowCount; ++i)
                 {
-                    if (i != e.RowIndex && dgvKetLuan.Rows[i].Cells[0].Value != null && dgvKetLuan.Rows[i].Cells[0].Value.ToString() == dgvKetLuan.CurrentCell.Value.ToString())
+                    if (i != dgvKetLuan.CurrentCell.RowIndex && dgvKetLuan.Rows[i].Cells[0].Value != null && dgvKetLuan.Rows[i].Cells[0].Value.ToString() == dgvKetLuan.CurrentCell.Value.ToString())
                     {
                         MessageBox.Show("Kết luận hiện tại trùng với kết luận tại hàng " + (i + 1), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvKetLuan.CurrentCell.Value = "";

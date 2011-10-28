@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using DuongTinhDuyen.Components;
+using System.Windows.Forms;
 
 namespace DuongTinhDuyen.DataLayer
 {
@@ -21,6 +22,10 @@ namespace DuongTinhDuyen.DataLayer
             return m_LuatData.NewRow();
         }
 
+        public void LayDong()
+        {
+            MessageBox.Show(m_LuatData.Rows.Count.ToString());
+        }
         public void ThemLuat(DataRow m_Row)
         {
             m_LuatData.Rows.Add(m_Row);
