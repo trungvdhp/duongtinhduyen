@@ -15,3 +15,4 @@ E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTin
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmMain.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.Properties.Resources.resources
 E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.csproj.GenerateResource.Cache
+E:\Tai lieu\Tai lieu ki 7\He Chuyen Gia\Duong Tinh Duyen\duongtinhduyen\DuongTinhDuyen\DuongTinhDuyen\obj\x86\Debug\DuongTinhDuyen.frmChuyenGia.resources

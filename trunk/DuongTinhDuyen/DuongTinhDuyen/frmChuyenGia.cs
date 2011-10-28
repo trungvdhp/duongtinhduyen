@@ -10,51 +10,63 @@ using DuongTinhDuyen.DataLayer;
 
 namespace DuongTinhDuyen
 {
-    public partial class frmLuat : Form
+    public partial class frmChuyenGia : Form
     {
         #region Fields
         LuatCtrl m_LuatCtrl = new LuatCtrl();
         NutCtrl m_NutCtrl = new NutCtrl();
         KetLuanCtrl m_KetLuanCtrl = new KetLuanCtrl();
+        LuatData m_LuatData = new LuatData();
+        DataTable dtLuat = new DataTable();
+        List<int> lstNut;
+        String strKetLuan;
         #endregion
         #region Constructor
-        public frmLuat()
+        public frmChuyenGia()
         {
             InitializeComponent();
         }
         #endregion
 
         #region Load
-        private void frmLuat_Load(object sender, EventArgs e)
+        private void frmChuyenGia_Load(object sender, EventArgs e)
         {
-            m_LuatCtrl.HienThi(dgvLuat, bindingNavigatorLuat);
+            //m_LuatCtrl.HienThi(dgvLuat, bindingNavigatorLuat);
+            lstNut = new List<int>();
+            strKetLuan = "";
+            //dtNut = (DataTable)cboGiaThiet.DataSource;
+            dtLuat = m_LuatData.LayDsLuat();
+            dgvGiaThiet.Rows.Clear();
+            dgvKetLuan.Rows.Clear();
             m_NutCtrl.HienThiDataGridViewComboBoxColumn(colNoiDungGiaThiet);
+            m_NutCtrl.HienThiDataGridViewComboBoxColumn(colGiaThiet);
             m_KetLuanCtrl.HienThiDataGridViewComboBoxColumn(colNoiDungKL);
+            LayDsNutTiep();
         }
         #endregion
 
         #region BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (dgvLuat.RowCount == 0)
-                bindingNavigatorDeleteItem.Enabled = false;
-            else if (MessageBox.Show("Bạn có chắc chắn xóa luật này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                bindingNavigatorLuat.BindingSource.RemoveCurrent();
-            }
+            //if (dgvLuat.RowCount == 0)
+                //bindingNavigatorDeleteItem.Enabled = false;
+            //else if (MessageBox.Show("Bạn có chắc chắn xóa luật này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+                //bindingNavigatorLuat.BindingSource.RemoveCurrent();
+            //}
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            if (dgvLuat.RowCount == 0)
-                bindingNavigatorDeleteItem.Enabled = true;
+            //if (dgvLuat.RowCount == 0)
+                //bindingNavigatorDeleteItem.Enabled = true;
 
             DataRow m_Row = m_LuatCtrl.ThemDongMoi();
             //m_Row["MaLuat"] = ;
             m_Row["GiaThiet"] = "";
             m_Row["KetLuan"] = "";
             m_LuatCtrl.ThemLuat(m_Row);
-            bindingNavigatorLuat.BindingSource.MoveLast();
+            //bindingNavigatorLuat.BindingSource.MoveLast();
         }
 
         public Boolean KiemTraTruocKhiLuu(DataGridView dgv, String cellString)
@@ -73,12 +85,12 @@ namespace DuongTinhDuyen
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (KiemTraTruocKhiLuu(dgvLuat,"colGiaThiet") == true)
+            /*if (KiemTraTruocKhiLuu(dgvLuat,"colGiaThiet") == true)
             {
                 bindingNavigatorPositionItem.Focus();
                 m_LuatCtrl.LuuLuat();
-                frmLuat_Load(sender, e);
-            }
+                frmChuyenGia_Load(sender, e);
+            }*/
         }
         #endregion
 
@@ -91,7 +103,7 @@ namespace DuongTinhDuyen
 
         private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
         {
-            frmLuat_Load(sender, e);
+            frmChuyenGia_Load(sender, e);
         }
 
         private void bindingNavigatorAddNewItemNut_Click(object sender, EventArgs e)
@@ -112,7 +124,7 @@ namespace DuongTinhDuyen
 
         private void dgvLuat_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 dgvGiaThiet.Rows.Clear();
                 dgvKetLuan.Rows.Clear();
@@ -129,41 +141,11 @@ namespace DuongTinhDuyen
                     }
                 }
                 String s = dgvLuat.CurrentRow.Cells[2].Value.ToString();
-                int rid = 0;
-                if (ketLuan.Length == 1)
-                {
-                    dgvKetLuan.Rows.Add();
-                    dgvKetLuan.Rows[rid].Cells[1].Value = "và";
-                    if (ketLuan[rid] != "")
-                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                    rid++;
-                }
-                for (int i = 0; i < s.Length; ++i)
-                {
-                    if (s[i] == '&')
-                    {
-                        dgvKetLuan.Rows.Add();
-                        dgvKetLuan.Rows[rid].Cells[1].Value = "và";
-                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                        rid++;
-                    }
-                    else if (s[i] == '|')
-                    {
-                        dgvKetLuan.Rows.Add();
-                        dgvKetLuan.Rows[rid].Cells[1].Value = "hoặc";
-                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                        rid++;
-                    }
-                }
-                if (ketLuan.Length > 1)
-                {
-                    dgvKetLuan.Rows.Add();
-                    dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
-                }
+                
             }
             catch
             {
-            }
+            }*/
         }
 
         private void bindingNavigatorAddNewItemKetLuan_Click(object sender, EventArgs e)
@@ -174,26 +156,26 @@ namespace DuongTinhDuyen
 
         private void bindingNavigatorDeleteItemKetLuan_Click(object sender, EventArgs e)
         {
-            if (dgvGiaThiet.RowCount == 0)
+            /*if (dgvGiaThiet.RowCount == 0)
                 bindingNavigatorDeleteItemKetLuan.Enabled = false;
             else if (MessageBox.Show("Bạn có chắc chắn xóa kết luận này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 dgvKetLuan.Rows.Remove(dgvKetLuan.CurrentRow);
-            }
+            }*/
         }
 
         private void bindingNavigatorDeleteItemGiaThiet_Click(object sender, EventArgs e)
         {
-            if (dgvGiaThiet.RowCount == 0)
+            /*if (dgvGiaThiet.RowCount == 0)
                 bindingNavigatorDeleteItemGiaThiet.Enabled = false;
             else if (MessageBox.Show("Bạn có chắc chắn xóa giả thiết này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 dgvGiaThiet.Rows.Remove(dgvGiaThiet.CurrentRow);
-            }
+            }*/
         }
         public bool DaCoGiaThiet(String maGiaThiet)
         {
-            foreach (DataGridViewRow dr in dgvLuat.Rows)
+            foreach (DataGridViewRow dr in dgvGiaThiet.Rows)
             {
                 if (dr.Cells[1].Value.ToString() == maGiaThiet)
                     return true;
@@ -219,7 +201,7 @@ namespace DuongTinhDuyen
                     MessageBox.Show("Giả thiết này đã có trong LUẬT!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    dgvLuat.CurrentRow.Cells[1].Value = strGiaThiet;
+                    //dgvLuat.CurrentRow.Cells[1].Value = strGiaThiet;
                 }
             }
             
@@ -237,7 +219,7 @@ namespace DuongTinhDuyen
                     else
                         strKetLuan += dr.Cells[0].Value.ToString();
                 }
-                dgvLuat.CurrentRow.Cells[2].Value = strKetLuan;
+                //dgvLuat.CurrentRow.Cells[2].Value = strKetLuan;
             }
         }
 
@@ -277,6 +259,153 @@ namespace DuongTinhDuyen
                     }
                 }
             }
+        }
+
+        private void btnLamLai_Click(object sender, EventArgs e)
+        {
+            frmChuyenGia_Load(sender, e);
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LayDsNutTiep()
+        {
+            foreach (int i in lstNut)
+            {
+                MessageBox.Show(i.ToString() + ";");
+            }
+            try
+            {
+                dgvNut.Rows.Clear();
+                List<DataRow> lstLuat = new List<DataRow>();
+                foreach (DataRow dr in dtLuat.Rows)
+                {
+                    String[] strNut = dr[1].ToString().Split('&');
+                    int dem = 0;
+                    bool[] danhdau = new bool[strNut.Length];
+                    for (int i = 0; i < strNut.Length; ++i)
+                    {
+                        for (int j = 0; j < lstNut.Count; ++j)
+                        {
+                            if (lstNut[j].ToString() == strNut[i])
+                            {
+                                danhdau[i] = true;
+                                dem++;
+                            }
+                            else
+                            {
+                                danhdau[i] = false;
+                            }
+                        }
+                    }
+                    if (dem == lstNut.Count || dem == 0)
+                    {
+                        for (int i = 0; i < strNut.Length; ++i)
+                        {
+                            bool check = false;
+                            if (danhdau[i] == false)
+                            {
+                                foreach (DataGridViewRow dvr in dgvNut.Rows)
+                                {
+                                    int d = Convert.ToInt32(strNut[i]);
+                                    if (dvr.Cells[1].Value != null)
+                                    {
+                                        if (((d > 0 && dvr.Cells[0].Value.ToString() == "Có") ||
+                                            (d < 0 && dvr.Cells[0].Value.ToString() == "Không")) &&
+                                            Math.Abs(d) == Convert.ToInt32(dvr.Cells[1].Value.ToString()))
+                                        {
+                                            check = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                                MessageBox.Show(strNut[i] + ", "+ check.ToString());
+                                if (check == false)
+                                {
+                                    dgvNut.Rows.Add();
+                                    int rid = dgvNut.RowCount - 1;
+                                    dgvNut.Rows[rid].Cells[0].Value = Convert.ToInt32(strNut[i]) > 0 ? "Có" : "Không";
+                                    dgvNut.Rows[rid].Cells[1].Value = Math.Abs(Convert.ToInt32(strNut[i]));
+                                }
+                            }
+                        }
+                    }
+                    if (dem == strNut.Length)
+                    {
+                        dgvNut.Rows.Add();
+                        strKetLuan = dr[2].ToString();
+                    }
+                    if (dem != lstNut.Count)
+                    {
+                        lstLuat.Add(dr);
+                    }
+                }
+                MessageBox.Show("So luat loai bo la: " + lstLuat.Count);
+                for (int i = 0; i < lstLuat.Count; ++i)
+                {
+                    dtLuat.Rows.Remove(lstLuat[i]);
+                }
+                MessageBox.Show("Con lai so Luat la: " + dtLuat.Rows.Count);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void btnTiepTuc_Click(object sender, EventArgs e)
+        {
+            int rid;
+            if (dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[1].Value == null)
+            {
+                String[] ketLuan = strKetLuan.Split(new char[] { '&', '|' });
+                rid = 0;
+                if (ketLuan.Length == 1)
+                {
+                    dgvKetLuan.Rows.Add();
+                    dgvKetLuan.Rows[rid].Cells[1].Value = "và";
+                    if (ketLuan[rid] != "")
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                    rid++;
+                }
+                for (int i = 0; i < strKetLuan.Length; ++i)
+                {
+                    if (strKetLuan[i] == '&')
+                    {
+                        dgvKetLuan.Rows.Add();
+                        dgvKetLuan.Rows[rid].Cells[1].Value = "và";
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                        rid++;
+                    }
+                    else if (strKetLuan[i] == '|')
+                    {
+                        dgvKetLuan.Rows.Add();
+                        dgvKetLuan.Rows[rid].Cells[1].Value = "hoặc";
+                        dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                        rid++;
+                    }
+                }
+                if (ketLuan.Length > 1)
+                {
+                    dgvKetLuan.Rows.Add();
+                    dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
+                }
+                MessageBox.Show("Hãy xem kết luận của chuyên gia trong bảng bên dưới", "Kết luận của chuyên gia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            lstNut.Add(Convert.ToInt32((dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[0].Value.ToString() == "Có" ? "" : "-") + 
+                dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[1].Value.ToString()));
+            dgvGiaThiet.Rows.Add();
+            rid = dgvGiaThiet.RowCount - 1;
+            dgvGiaThiet.Rows[rid].Cells[0].Value = dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            dgvGiaThiet.Rows[rid].Cells[1].Value = Math.Abs(Convert.ToInt32(dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[1].Value.ToString()));
+            LayDsNutTiep();
+        }
+
+        private void btnKetThuc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
