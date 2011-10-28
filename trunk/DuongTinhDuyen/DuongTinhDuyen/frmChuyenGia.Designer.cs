@@ -33,20 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvGiaThiet = new System.Windows.Forms.DataGridView();
+            this.colTienTo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colNoiDungGiaThiet = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dgvKetLuan = new System.Windows.Forms.DataGridView();
             this.colNoiDungKL = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colHauTo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvNut = new System.Windows.Forms.DataGridView();
+            this.colTienTo1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colGiaThiet = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.btnLamLai = new System.Windows.Forms.Button();
             this.btnKetThuc = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnTiepTuc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.colTienTo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colNoiDungGiaThiet = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colTienTo1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colGiaThiet = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -102,6 +102,30 @@
             this.dgvGiaThiet.TabIndex = 72;
             this.dgvGiaThiet.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaThiet_CellValueChanged);
             this.dgvGiaThiet.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvGiaThiet_DataError);
+            // 
+            // colTienTo
+            // 
+            this.colTienTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colTienTo.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.colTienTo.HeaderText = "Tiền tố";
+            this.colTienTo.Items.AddRange(new object[] {
+            "Có",
+            "Không"});
+            this.colTienTo.Name = "colTienTo";
+            this.colTienTo.ReadOnly = true;
+            this.colTienTo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTienTo.Width = 80;
+            // 
+            // colNoiDungGiaThiet
+            // 
+            this.colNoiDungGiaThiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNoiDungGiaThiet.DataPropertyName = "NoiDung";
+            this.colNoiDungGiaThiet.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.colNoiDungGiaThiet.FillWeight = 298.4772F;
+            this.colNoiDungGiaThiet.HeaderText = "Giả thiết";
+            this.colNoiDungGiaThiet.MaxDropDownItems = 50;
+            this.colNoiDungGiaThiet.Name = "colNoiDungGiaThiet";
+            this.colNoiDungGiaThiet.ReadOnly = true;
             // 
             // dgvKetLuan
             // 
@@ -198,6 +222,30 @@
             this.dgvNut.Size = new System.Drawing.Size(800, 315);
             this.dgvNut.TabIndex = 73;
             // 
+            // colTienTo1
+            // 
+            this.colTienTo1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colTienTo1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.colTienTo1.HeaderText = "Tiền tố";
+            this.colTienTo1.Items.AddRange(new object[] {
+            "Có",
+            "Không"});
+            this.colTienTo1.Name = "colTienTo1";
+            this.colTienTo1.ReadOnly = true;
+            this.colTienTo1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colTienTo1.Width = 80;
+            // 
+            // colGiaThiet
+            // 
+            this.colGiaThiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colGiaThiet.DataPropertyName = "NoiDung";
+            this.colGiaThiet.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.colGiaThiet.FillWeight = 298.4772F;
+            this.colGiaThiet.HeaderText = "Giả thiết";
+            this.colGiaThiet.MaxDropDownItems = 50;
+            this.colGiaThiet.Name = "colGiaThiet";
+            this.colGiaThiet.ReadOnly = true;
+            // 
             // btnLamLai
             // 
             this.btnLamLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -237,6 +285,7 @@
             // btnTiepTuc
             // 
             this.btnTiepTuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTiepTuc.Enabled = false;
             this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnTiepTuc.Location = new System.Drawing.Point(406, 378);
             this.btnTiepTuc.Name = "btnTiepTuc";
@@ -258,54 +307,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "BÓI TÌNH DUYÊN QUA CHỈ TAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // colTienTo
-            // 
-            this.colTienTo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colTienTo.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.colTienTo.HeaderText = "Tiền tố";
-            this.colTienTo.Items.AddRange(new object[] {
-            "Có",
-            "Không"});
-            this.colTienTo.Name = "colTienTo";
-            this.colTienTo.ReadOnly = true;
-            this.colTienTo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colTienTo.Width = 80;
-            // 
-            // colNoiDungGiaThiet
-            // 
-            this.colNoiDungGiaThiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNoiDungGiaThiet.DataPropertyName = "NoiDung";
-            this.colNoiDungGiaThiet.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.colNoiDungGiaThiet.FillWeight = 298.4772F;
-            this.colNoiDungGiaThiet.HeaderText = "Giả thiết";
-            this.colNoiDungGiaThiet.MaxDropDownItems = 50;
-            this.colNoiDungGiaThiet.Name = "colNoiDungGiaThiet";
-            this.colNoiDungGiaThiet.ReadOnly = true;
-            // 
-            // colTienTo1
-            // 
-            this.colTienTo1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colTienTo1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.colTienTo1.HeaderText = "Tiền tố";
-            this.colTienTo1.Items.AddRange(new object[] {
-            "Có",
-            "Không"});
-            this.colTienTo1.Name = "colTienTo1";
-            this.colTienTo1.ReadOnly = true;
-            this.colTienTo1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colTienTo1.Width = 80;
-            // 
-            // colGiaThiet
-            // 
-            this.colGiaThiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colGiaThiet.DataPropertyName = "NoiDung";
-            this.colGiaThiet.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.colGiaThiet.FillWeight = 298.4772F;
-            this.colGiaThiet.HeaderText = "Giả thiết";
-            this.colGiaThiet.MaxDropDownItems = 50;
-            this.colGiaThiet.Name = "colGiaThiet";
-            this.colGiaThiet.ReadOnly = true;
             // 
             // frmChuyenGia
             // 
