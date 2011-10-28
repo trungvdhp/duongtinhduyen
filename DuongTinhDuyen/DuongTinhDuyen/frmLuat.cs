@@ -133,7 +133,6 @@ namespace DuongTinhDuyen
                 if (ketLuan.Length == 1)
                 {
                     dgvKetLuan.Rows.Add();
-                    dgvKetLuan.Rows[rid].Cells[1].Value = "và";
                     if (ketLuan[rid] != "")
                         dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
                     rid++;

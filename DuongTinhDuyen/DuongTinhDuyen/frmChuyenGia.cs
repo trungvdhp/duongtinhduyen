@@ -42,6 +42,7 @@ namespace DuongTinhDuyen
             m_NutCtrl.HienThiDataGridViewComboBoxColumn(colGiaThiet);
             m_KetLuanCtrl.HienThiDataGridViewComboBoxColumn(colNoiDungKL);
             LayDsNutTiep();
+            btnTiepTuc.Enabled = true;
         }
         #endregion
 
@@ -272,10 +273,10 @@ namespace DuongTinhDuyen
         }
         private void LayDsNutTiep()
         {
-            foreach (int i in lstNut)
+            /*foreach (int i in lstNut)
             {
                 MessageBox.Show(i.ToString() + ";");
-            }
+            }*/
             try
             {
                 dgvNut.Rows.Clear();
@@ -293,38 +294,43 @@ namespace DuongTinhDuyen
                             {
                                 danhdau[i] = true;
                                 dem++;
-                            }
-                            else
-                            {
-                                danhdau[i] = false;
+                                break;
                             }
                         }
                     }
-                    if (dem == lstNut.Count || dem == 0)
+                    //MessageBox.Show(dem.ToString());
+                    if (dem == lstNut.Count)
                     {
+                        if (dem == strNut.Length)
+                        {
+                            dgvNut.Rows.Add();
+                            strKetLuan = dr[2].ToString();
+                        }
                         for (int i = 0; i < strNut.Length; ++i)
                         {
                             bool check = false;
                             if (danhdau[i] == false)
                             {
+                                int d = Convert.ToInt32(strNut[i]);
+                                //MessageBox.Show("i=" + i + ";giatri = " + strNut[i]);
                                 foreach (DataGridViewRow dvr in dgvNut.Rows)
                                 {
-                                    int d = Convert.ToInt32(strNut[i]);
                                     if (dvr.Cells[1].Value != null)
                                     {
+                                        //MessageBox.Show("d=" + d + ":" + dvr.Cells[0].Value.ToString() + ":" + dvr.Cells[1].Value.ToString());
                                         if (((d > 0 && dvr.Cells[0].Value.ToString() == "Có") ||
                                             (d < 0 && dvr.Cells[0].Value.ToString() == "Không")) &&
-                                            Math.Abs(d) == Convert.ToInt32(dvr.Cells[1].Value.ToString()))
+                                            Math.Abs(d).ToString() == dvr.Cells[1].Value.ToString())
                                         {
                                             check = true;
                                             break;
                                         }
                                     }
                                 }
-                                MessageBox.Show(strNut[i] + ", "+ check.ToString());
                                 if (check == false)
                                 {
                                     dgvNut.Rows.Add();
+                                    //MessageBox.Show("Thêm: " + strNut[i]);
                                     int rid = dgvNut.RowCount - 1;
                                     dgvNut.Rows[rid].Cells[0].Value = Convert.ToInt32(strNut[i]) > 0 ? "Có" : "Không";
                                     dgvNut.Rows[rid].Cells[1].Value = Math.Abs(Convert.ToInt32(strNut[i]));
@@ -332,22 +338,17 @@ namespace DuongTinhDuyen
                             }
                         }
                     }
-                    if (dem == strNut.Length)
-                    {
-                        dgvNut.Rows.Add();
-                        strKetLuan = dr[2].ToString();
-                    }
-                    if (dem != lstNut.Count)
+                    else
                     {
                         lstLuat.Add(dr);
                     }
                 }
-                MessageBox.Show("So luat loai bo la: " + lstLuat.Count);
+                //MessageBox.Show("So luat loai bo la: " + lstLuat.Count);
                 for (int i = 0; i < lstLuat.Count; ++i)
                 {
                     dtLuat.Rows.Remove(lstLuat[i]);
                 }
-                MessageBox.Show("Con lai so Luat la: " + dtLuat.Rows.Count);
+                //MessageBox.Show("Con lai so Luat la: " + dtLuat.Rows.Count);
             }
             catch (Exception ex)
             {
@@ -364,7 +365,6 @@ namespace DuongTinhDuyen
                 if (ketLuan.Length == 1)
                 {
                     dgvKetLuan.Rows.Add();
-                    dgvKetLuan.Rows[rid].Cells[1].Value = "và";
                     if (ketLuan[rid] != "")
                         dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
                     rid++;
@@ -392,6 +392,7 @@ namespace DuongTinhDuyen
                     dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
                 }
                 MessageBox.Show("Hãy xem kết luận của chuyên gia trong bảng bên dưới", "Kết luận của chuyên gia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnTiepTuc.Enabled = false;
                 return;
             }
             lstNut.Add(Convert.ToInt32((dgvNut.Rows[dgvNut.CurrentCell.RowIndex].Cells[0].Value.ToString() == "Có" ? "" : "-") + 
