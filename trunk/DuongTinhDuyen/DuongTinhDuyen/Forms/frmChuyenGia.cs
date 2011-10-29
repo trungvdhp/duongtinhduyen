@@ -30,7 +30,7 @@ namespace DuongTinhDuyen
         private void frmChuyenGia_Load(object sender, EventArgs e)
         {
             lstNut = new List<int>();
-            strKetLuan = "";
+            strKetLuan = "0";
             dtLuat = m_LuatData.LayDsLuat();
             dgvGiaThiet.Rows.Clear();
             dgvKetLuan.Rows.Clear();
@@ -70,7 +70,7 @@ namespace DuongTinhDuyen
             dtLuat = m_LuatData.LayDsLuat();
             dgvGiaThiet.Rows.RemoveAt(dgvGiaThiet.RowCount - 1);
             dgvKetLuan.Rows.Clear();
-            strKetLuan = "";
+            strKetLuan = "0";
             LayDsNutTiep();
             btnTiepTuc.Enabled = true;
             btnKetThuc.Enabled = true;
@@ -210,7 +210,7 @@ namespace DuongTinhDuyen
 
         private void btnKetThuc_Click(object sender, EventArgs e)
         {
-            if (strKetLuan != "")
+            if (strKetLuan != "0")
             {
                 HienThiKetLuan();
             }
