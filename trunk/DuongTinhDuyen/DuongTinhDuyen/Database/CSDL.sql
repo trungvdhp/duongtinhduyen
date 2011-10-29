@@ -133,7 +133,7 @@ CREATE TABLE LUAT
 (
 	MaLuat int NOT NULL PRIMARY KEY IDENTITY,
 	GiaThiet varchar(100) NOT NULL,
-	KetLuan varchar(100) NOT NULL
+	KetLuan varchar(100)
 )
 INSERT INTO LUAT(GiaThiet,KetLuan) VALUES('1&-5','1')
 INSERT INTO LUAT(GiaThiet,KetLuan) VALUES('21','1')

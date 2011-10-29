@@ -29,6 +29,10 @@ namespace DuongTinhDuyen.Controller
         {
             m_LuatData.ThemLuat(m_Row);
         }
+        public void ThemLuat(String giaThiet, String ketLuan)
+        {
+            m_LuatData.ThemLuat(giaThiet, ketLuan);
+        }
         #endregion
 
         #region Luu du lieu

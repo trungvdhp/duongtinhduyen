@@ -254,7 +254,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 28);
             this.bindingNavigatorAddNewItem.Text = "của {0}";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItemLuat_Click);
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -264,7 +264,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 28);
             this.bindingNavigatorDeleteItem.Text = "Xóa";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItemLuat_Click);
             // 
             // toolStripSeparator1
             // 
@@ -279,7 +279,7 @@
             this.bindingNavigatorRefreshItem.Name = "bindingNavigatorRefreshItem";
             this.bindingNavigatorRefreshItem.Size = new System.Drawing.Size(23, 28);
             this.bindingNavigatorRefreshItem.Text = "Làm tươi";
-            this.bindingNavigatorRefreshItem.Click += new System.EventHandler(this.bindingNavigatorRefreshItem_Click);
+            this.bindingNavigatorRefreshItem.Click += new System.EventHandler(this.bindingNavigatorRefreshItemLuat_Click);
             // 
             // saveToolStripButton
             // 
@@ -289,7 +289,7 @@
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(23, 28);
             this.saveToolStripButton.Text = "&Save";
-            this.saveToolStripButton.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
+            this.saveToolStripButton.Click += new System.EventHandler(this.bindingNavigatorSaveItemLuat_Click);
             // 
             // splitContainer1
             // 
@@ -393,7 +393,7 @@
             this.bindingNavigatorAddNewItemNut.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItemNut.Size = new System.Drawing.Size(23, 28);
             this.bindingNavigatorAddNewItemNut.Text = "Thêm mới";
-            this.bindingNavigatorAddNewItemNut.Click += new System.EventHandler(this.bindingNavigatorAddNewItemNut_Click);
+            this.bindingNavigatorAddNewItemNut.Click += new System.EventHandler(this.bindingNavigatorAddNewItemGiaThiet_Click);
             // 
             // bindingNavigatorDeleteItemGiaThiet
             // 
@@ -441,7 +441,7 @@
             this.dgvKetLuan.Size = new System.Drawing.Size(399, 138);
             this.dgvKetLuan.TabIndex = 74;
             this.dgvKetLuan.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetLuan_CellValueChanged);
-            this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvKetLuan_DataError);
             // 
             // colNoiDungKL
             // 

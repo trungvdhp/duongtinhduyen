@@ -21,14 +21,12 @@ namespace DuongTinhDuyen
             InitializeComponent();
         }
         #endregion
-
         #region Load
         private void frmNut_Load(object sender, EventArgs e)
         {
             m_NutCtrl.HienThi(dgvNut, bindingNavigatorNut);
         }
         #endregion
-
         #region BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
@@ -64,6 +62,7 @@ namespace DuongTinhDuyen
                     if (str == "")
                     {
                         MessageBox.Show("Giá trị của ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dgvNut.CurrentCell = row.Cells[cellString];
                         return false;
                     }
                 }
@@ -81,8 +80,12 @@ namespace DuongTinhDuyen
                 bindingNavigatorNut.BindingSource.MoveLast();
             }
         }
-        #endregion
 
+        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
+        {
+            frmNut_Load(sender, e);
+        }
+        #endregion
         #region DataError event
         private void dgvNut_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -90,9 +93,5 @@ namespace DuongTinhDuyen
         }
         #endregion
 
-        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
-        {
-            frmNut_Load(sender, e);
-        }
     }
 }

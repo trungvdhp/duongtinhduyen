@@ -21,14 +21,12 @@ namespace DuongTinhDuyen
             InitializeComponent();
         }
         #endregion
-
         #region Load
         private void frmKetLuan_Load(object sender, EventArgs e)
         {
             m_KetLuanCtrl.HienThi(dgvKetLuan, bindingNavigatorNut);
         }
         #endregion
-
         #region BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
@@ -64,6 +62,7 @@ namespace DuongTinhDuyen
                     if (str == "")
                     {
                         MessageBox.Show("Giá trị của ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dgvKetLuan.CurrentCell = row.Cells[cellString];
                         return false;
                     }
                 }
@@ -81,18 +80,17 @@ namespace DuongTinhDuyen
                 bindingNavigatorNut.BindingSource.MoveLast();
             }
         }
-        #endregion
 
+        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
+        {
+            frmKetLuan_Load(sender, e);
+        }
+        #endregion
         #region DataError event
         private void dgvKetLuan_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
         #endregion
-
-        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
-        {
-            frmKetLuan_Load(sender, e);
-        }
     }
 }
