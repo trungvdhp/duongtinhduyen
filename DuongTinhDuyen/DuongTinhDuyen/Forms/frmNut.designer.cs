@@ -246,7 +246,7 @@
             this.colNoiDung.DataPropertyName = "NoiDung";
             this.colNoiDung.FillWeight = 98.47716F;
             this.colNoiDung.HeaderText = "Nội dung";
-            this.colNoiDung.MaxInputLength = 30;
+            this.colNoiDung.MaxInputLength = 100;
             this.colNoiDung.Name = "colNoiDung";
             // 
             // frmNut
