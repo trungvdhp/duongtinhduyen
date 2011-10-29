@@ -23,7 +23,6 @@ namespace DuongTinhDuyen
             InitializeComponent();
         }
         #endregion
-
         #region Load
         private void frmLuat_Load(object sender, EventArgs e)
         {
@@ -32,9 +31,8 @@ namespace DuongTinhDuyen
             m_KetLuanCtrl.HienThiDataGridViewComboBoxColumn(colNoiDungKL);
         }
         #endregion
-
         #region BindingNavigatorItems
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorDeleteItemLuat_Click(object sender, EventArgs e)
         {
             if (dgvLuat.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = false;
@@ -44,7 +42,7 @@ namespace DuongTinhDuyen
             }
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorAddNewItemLuat_Click(object sender, EventArgs e)
         {
             if (dgvLuat.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = true;
@@ -71,33 +69,111 @@ namespace DuongTinhDuyen
             return true;
         }
 
-        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorSaveItemLuat_Click(object sender, EventArgs e)
         {
-            if (KiemTraTruocKhiLuu(dgvLuat,"colGiaThiet") == true)
+            if (KiemTraTruocKhiLuu(dgvLuat, "colGiaThiet") == true)
             {
                 bindingNavigatorPositionItem.Focus();
                 m_LuatCtrl.LuuLuat();
                 frmLuat_Load(sender, e);
             }
+            else
+                dgvLuat_SelectionChanged(sender, e);
         }
-        #endregion
 
-        #region DataError event
-        private void dgvLuat_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            e.Cancel = true;
-        }
-        #endregion
-
-        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorRefreshItemLuat_Click(object sender, EventArgs e)
         {
             frmLuat_Load(sender, e);
         }
 
-        private void bindingNavigatorAddNewItemNut_Click(object sender, EventArgs e)
+        public bool DaCoGiaThiet(String maGiaThiet)
+        {
+            foreach (DataGridViewRow dr in dgvLuat.Rows)
+            {
+                if (dr.Cells[1].Value.ToString() == maGiaThiet)
+                    return true;
+            }
+            return false;
+        }
+
+        private void bindingNavigatorAddNewItemGiaThiet_Click(object sender, EventArgs e)
         {
             dgvGiaThiet.Rows.Add();
             dgvGiaThiet.Rows[dgvGiaThiet.RowCount - 1].Cells[0].Value = "Có";
+        }
+
+        private void bindingNavigatorDeleteItemGiaThiet_Click(object sender, EventArgs e)
+        {
+            if (dgvGiaThiet.RowCount == 0)
+                bindingNavigatorDeleteItemGiaThiet.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa giả thiết này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dgvGiaThiet.Rows.Remove(dgvGiaThiet.CurrentRow);
+            }
+        }
+
+        private void saveToolStripButtonGiaThiet_Click(object sender, EventArgs e)
+        {
+            dgvGiaThiet.EndEdit(DataGridViewDataErrorContexts.Commit);
+            if (KiemTraTruocKhiLuu(dgvGiaThiet, "colNoiDungGiaThiet") == true)
+            {
+                String strGiaThiet = "";
+                String strNut = "";
+                foreach (DataGridViewRow dr in dgvGiaThiet.Rows)
+                {
+                    strNut = (dr.Cells[0].Value.ToString() == "Có" ? "" : "-") + dr.Cells[1].Value.ToString();
+                    if (dr != dgvGiaThiet.Rows[0])
+                        strGiaThiet += "&" + strNut;
+                    else
+                        strGiaThiet += strNut;
+                }
+                if (DaCoGiaThiet(strGiaThiet) == true)
+                    MessageBox.Show("Giả thiết này đã có trong LUẬT!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    dgvLuat.CurrentRow.Cells[1].Value = strGiaThiet;
+                }
+            }
+
+        }
+
+        private void bindingNavigatorAddNewItemKetLuan_Click(object sender, EventArgs e)
+        {
+            dgvKetLuan.Rows.Add();
+            dgvKetLuan.Rows[dgvKetLuan.RowCount - 1].Cells[1].Value = "và";
+        }
+
+        private void bindingNavigatorDeleteItemKetLuan_Click(object sender, EventArgs e)
+        {
+            if (dgvGiaThiet.RowCount == 0)
+                bindingNavigatorDeleteItemKetLuan.Enabled = false;
+            else if (MessageBox.Show("Bạn có chắc chắn xóa kết luận này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dgvKetLuan.Rows.Remove(dgvKetLuan.CurrentRow);
+            }
+        }
+
+        private void saveToolStripButtonKetLuan_Click(object sender, EventArgs e)
+        {
+            dgvKetLuan.EndEdit(DataGridViewDataErrorContexts.Commit);
+            if (KiemTraTruocKhiLuu(dgvKetLuan, "colNoiDungKL") == true)
+            {
+                String strKetLuan = "";
+                foreach (DataGridViewRow dr in dgvKetLuan.Rows)
+                {
+                    if (dr != dgvKetLuan.Rows[dgvKetLuan.RowCount - 1])
+                        strKetLuan += dr.Cells[0].Value.ToString() + (dr.Cells[1].Value.ToString() == "và" ? "&" : "|");
+                    else
+                        strKetLuan += dr.Cells[0].Value.ToString();
+                }
+                dgvLuat.CurrentRow.Cells[2].Value = strKetLuan;
+            }
+        }
+        #endregion
+        #region DataError event
+        private void dgvLuat_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = true;
         }
 
         private void dgvGiaThiet_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -105,11 +181,12 @@ namespace DuongTinhDuyen
             e.Cancel = true;
         }
 
-        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void dgvKetLuan_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-
+        #endregion
+        #region DataGridView event
         private void dgvLuat_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -165,81 +242,6 @@ namespace DuongTinhDuyen
             }
         }
 
-        private void bindingNavigatorAddNewItemKetLuan_Click(object sender, EventArgs e)
-        {
-            dgvKetLuan.Rows.Add();
-            dgvKetLuan.Rows[dgvKetLuan.RowCount - 1].Cells[1].Value = "và";
-        }
-
-        private void bindingNavigatorDeleteItemKetLuan_Click(object sender, EventArgs e)
-        {
-            if (dgvGiaThiet.RowCount == 0)
-                bindingNavigatorDeleteItemKetLuan.Enabled = false;
-            else if (MessageBox.Show("Bạn có chắc chắn xóa kết luận này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                dgvKetLuan.Rows.Remove(dgvKetLuan.CurrentRow);
-            }
-        }
-
-        private void bindingNavigatorDeleteItemGiaThiet_Click(object sender, EventArgs e)
-        {
-            if (dgvGiaThiet.RowCount == 0)
-                bindingNavigatorDeleteItemGiaThiet.Enabled = false;
-            else if (MessageBox.Show("Bạn có chắc chắn xóa giả thiết này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                dgvGiaThiet.Rows.Remove(dgvGiaThiet.CurrentRow);
-            }
-        }
-        public bool DaCoGiaThiet(String maGiaThiet)
-        {
-            foreach (DataGridViewRow dr in dgvLuat.Rows)
-            {
-                if (dr.Cells[1].Value.ToString() == maGiaThiet)
-                    return true;
-            }
-            return false;
-        }
-        private void saveToolStripButtonGiaThiet_Click(object sender, EventArgs e)
-        {
-            dgvGiaThiet.EndEdit(DataGridViewDataErrorContexts.Commit);
-            if( KiemTraTruocKhiLuu(dgvGiaThiet,"colNoiDungGiaThiet") == true)
-            {
-                String strGiaThiet = "";
-                String strNut = "";
-                foreach (DataGridViewRow dr in dgvGiaThiet.Rows)
-                {
-                    strNut = (dr.Cells[0].Value.ToString() == "Có" ? "" : "-") + dr.Cells[1].Value.ToString();
-                    if (dr != dgvGiaThiet.Rows[0])
-                        strGiaThiet += "&" + strNut;
-                    else
-                        strGiaThiet += strNut;
-                }
-                if (DaCoGiaThiet(strGiaThiet) == true)
-                    MessageBox.Show("Giả thiết này đã có trong LUẬT!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                {
-                    dgvLuat.CurrentRow.Cells[1].Value = strGiaThiet;
-                }
-            }
-            
-        }
-        private void saveToolStripButtonKetLuan_Click(object sender, EventArgs e)
-        {
-            dgvKetLuan.EndEdit(DataGridViewDataErrorContexts.Commit);
-            if (KiemTraTruocKhiLuu(dgvKetLuan, "colNoiDungKL") == true)
-            {
-                String strKetLuan = "";
-                foreach (DataGridViewRow dr in dgvKetLuan.Rows)
-                {
-                    if (dr != dgvKetLuan.Rows[dgvKetLuan.RowCount-1])
-                        strKetLuan += dr.Cells[0].Value.ToString() + (dr.Cells[1].Value.ToString() == "và" ? "&" : "|");
-                    else
-                        strKetLuan += dr.Cells[0].Value.ToString();
-                }
-                dgvLuat.CurrentRow.Cells[2].Value = strKetLuan;
-            }
-        }
-
         private void dgvGiaThiet_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvGiaThiet.CurrentCell == null)
@@ -277,5 +279,7 @@ namespace DuongTinhDuyen
                 }
             }
         }
+        #endregion
+        
     }
 }

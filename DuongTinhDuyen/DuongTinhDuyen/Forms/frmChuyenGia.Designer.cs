@@ -72,7 +72,8 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 181);
             this.splitContainer1.SplitterDistance = 400;
             this.splitContainer1.SplitterWidth = 1;
-            this.splitContainer1.TabIndex = 70;
+            this.splitContainer1.TabIndex = 6;
+            this.splitContainer1.TabStop = false;
             // 
             // dgvGiaThiet
             // 
@@ -99,9 +100,7 @@
             this.dgvGiaThiet.ReadOnly = true;
             this.dgvGiaThiet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvGiaThiet.Size = new System.Drawing.Size(400, 181);
-            this.dgvGiaThiet.TabIndex = 72;
-            this.dgvGiaThiet.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaThiet_CellValueChanged);
-            this.dgvGiaThiet.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvGiaThiet_DataError);
+            this.dgvGiaThiet.TabIndex = 6;
             // 
             // colTienTo
             // 
@@ -152,9 +151,8 @@
             this.dgvKetLuan.ReadOnly = true;
             this.dgvKetLuan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvKetLuan.Size = new System.Drawing.Size(399, 181);
-            this.dgvKetLuan.TabIndex = 74;
-            this.dgvKetLuan.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetLuan_CellValueChanged);
-            this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.dgvKetLuan.TabIndex = 7;
+            this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvKetLuan_DataError);
             // 
             // colNoiDungKL
             // 
@@ -192,7 +190,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 419);
-            this.panel1.TabIndex = 71;
+            this.panel1.TabIndex = 1;
             // 
             // dgvNut
             // 
@@ -220,7 +218,7 @@
             this.dgvNut.ReadOnly = true;
             this.dgvNut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvNut.Size = new System.Drawing.Size(800, 315);
-            this.dgvNut.TabIndex = 73;
+            this.dgvNut.TabIndex = 5;
             // 
             // colTienTo1
             // 
@@ -253,7 +251,7 @@
             this.btnLamLai.Location = new System.Drawing.Point(244, 378);
             this.btnLamLai.Name = "btnLamLai";
             this.btnLamLai.Size = new System.Drawing.Size(75, 23);
-            this.btnLamLai.TabIndex = 9;
+            this.btnLamLai.TabIndex = 4;
             this.btnLamLai.Text = "|<< &Làm lại";
             this.btnLamLai.UseVisualStyleBackColor = true;
             this.btnLamLai.Click += new System.EventHandler(this.btnLamLai_Click);
@@ -265,7 +263,7 @@
             this.btnKetThuc.Location = new System.Drawing.Point(487, 378);
             this.btnKetThuc.Name = "btnKetThuc";
             this.btnKetThuc.Size = new System.Drawing.Size(75, 23);
-            this.btnKetThuc.TabIndex = 9;
+            this.btnKetThuc.TabIndex = 3;
             this.btnKetThuc.Text = "&Kết thúc >>|";
             this.btnKetThuc.UseVisualStyleBackColor = true;
             this.btnKetThuc.Click += new System.EventHandler(this.btnKetThuc_Click);
@@ -277,7 +275,7 @@
             this.btnQuayLai.Location = new System.Drawing.Point(325, 378);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(75, 23);
-            this.btnQuayLai.TabIndex = 9;
+            this.btnQuayLai.TabIndex = 2;
             this.btnQuayLai.Text = "|< &Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
@@ -290,7 +288,7 @@
             this.btnTiepTuc.Location = new System.Drawing.Point(406, 378);
             this.btnTiepTuc.Name = "btnTiepTuc";
             this.btnTiepTuc.Size = new System.Drawing.Size(75, 23);
-            this.btnTiepTuc.TabIndex = 9;
+            this.btnTiepTuc.TabIndex = 1;
             this.btnTiepTuc.Text = "&Tiếp tục >|";
             this.btnTiepTuc.UseVisualStyleBackColor = true;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
