@@ -14,8 +14,8 @@ CREATE DATABASE DuongTinhDuyen
 ON
 (
 	NAME		= 'DuongTinhDuyen',
-	FILENAME	= 'C:\DuongTinhDuyen.MDF',
-	SIZE		= 20,
+	FILENAME	= 'D:\DuongTinhDuyen.MDF',
+	SIZE		= 2,
 	MAXSIZE		= 100,
 	FILEGROWTH	= 5
 )
@@ -68,7 +68,7 @@ INSERT INTO NUT(NoiDung) VALUES(N'Dạng chữ Y')
 INSERT INTO NUT(NoiDung) VALUES(N'Chẻ ba ở cuối')
 INSERT INTO NUT(NoiDung) VALUES(N'Uốn éo ngoằn ngoèo')
 INSERT INTO NUT(NoiDung) VALUES(N'Cong queo hay tua tủa đường nhỏ')
-INSERT INTO NUT(NoiDung) VALUES(N'Chẻ đôi và có thêm hai đường cắt dọc')
+INSERT INTO NUT(NoiDung) VALUES(N'Chẻ đôi và thêm hai đường cắt dọc')
 INSERT INTO NUT(NoiDung) VALUES(N'Chẻ đôi rồi hợp lại hướng lên trên')
 INSERT INTO NUT(NoiDung) VALUES(N'Đi xuống chạm đường hôn nhân thứ nhất')
 INSERT INTO NUT(NoiDung) VALUES(N'Ngả về đường Tâm đạo')
@@ -90,7 +90,7 @@ INSERT INTO NUT(NoiDung) VALUES(N'Thêm đường chỉ nhỏ nằm dọc hướ
 INSERT INTO NUT(NoiDung) VALUES(N'Thêm đường chỉ nhỏ nằm dọc hướng xuống dưới')
 INSERT INTO NUT(NoiDung) VALUES(N'Thêm đường chỉ nhỏ nằm xéo ngang')
 INSERT INTO NUT(NoiDung) VALUES(N'Đường tâm đạo uốn éo ngoằn ngoèo')
-INSERT INTO NUT(NoiDung) VALUES(N'Gồm hai đường và có một chấm trũng rõ ở giữa một đường cùng với đường trí đạo ngắn, thô, đậm')
+INSERT INTO NUT(NoiDung) VALUES(N'Gồm hai đường và một chấm trũng rõ ở giữa một đường cùng với đường trí đạo ngắn, thô, đậm')
 --===================================================================================================================================================
 CREATE TABLE KETLUAN
 (
