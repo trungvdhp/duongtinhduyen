@@ -66,6 +66,11 @@ namespace DuongTinhDuyen
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
+            /*if (dgvNut.RowCount > 1 && strKetLuan != "0" && btnTiepTuc.Enabled == false)
+            {
+                btnTiepTuc.Enabled = btnKetThuc.Enabled = true;
+                return;
+            }*/
             lstNut.RemoveAt(lstNut.Count - 1);
             dtLuat = m_LuatData.LayDsLuat();
             dgvGiaThiet.Rows.RemoveAt(dgvGiaThiet.RowCount - 1);
@@ -155,6 +160,7 @@ namespace DuongTinhDuyen
 
         private void HienThiKetLuan()
         {
+            dgvKetLuan.Rows.Clear();
             String[] ketLuan = strKetLuan.Split(new char[] { '&', '|' });
             int rid = 0;
             if (ketLuan.Length == 1)
@@ -187,8 +193,11 @@ namespace DuongTinhDuyen
                 dgvKetLuan.Rows[rid].Cells[0].Value = Math.Abs(Convert.ToInt32(ketLuan[rid]));
             }
             MessageBox.Show("Hãy xem kết luận của chuyên gia trong bảng bên dưới", "Kết luận của chuyên gia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnTiepTuc.Enabled = false;
-            btnKetThuc.Enabled = false;
+            if (dgvNut.RowCount == 1 && strKetLuan != "0")
+            {
+                btnTiepTuc.Enabled = false;
+                btnKetThuc.Enabled = false;
+            }
         }
 
         private void btnTiepTuc_Click(object sender, EventArgs e)
