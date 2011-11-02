@@ -55,9 +55,10 @@
             this.cboKieuXacThuc.Items.AddRange(new object[] {
             "Windows Authentication",
             "SQL Server Authentication"});
-            this.cboKieuXacThuc.Location = new System.Drawing.Point(135, 97);
+            this.cboKieuXacThuc.Location = new System.Drawing.Point(157, 119);
+            this.cboKieuXacThuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKieuXacThuc.Name = "cboKieuXacThuc";
-            this.cboKieuXacThuc.Size = new System.Drawing.Size(207, 24);
+            this.cboKieuXacThuc.Size = new System.Drawing.Size(241, 24);
             this.cboKieuXacThuc.TabIndex = 2;
             this.cboKieuXacThuc.SelectedIndexChanged += new System.EventHandler(this.cboKieuXacThuc_SelectedIndexChanged);
             // 
@@ -65,26 +66,28 @@
             // 
             this.txtMatKhau.Enabled = false;
             this.txtMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMatKhau.Location = new System.Drawing.Point(135, 163);
+            this.txtMatKhau.Location = new System.Drawing.Point(157, 201);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(207, 23);
+            this.txtMatKhau.Size = new System.Drawing.Size(241, 23);
             this.txtMatKhau.TabIndex = 4;
             // 
             // txtTenNguoiDung
             // 
             this.txtTenNguoiDung.Enabled = false;
             this.txtTenNguoiDung.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenNguoiDung.Location = new System.Drawing.Point(135, 131);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(157, 161);
+            this.txtTenNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
-            this.txtTenNguoiDung.Size = new System.Drawing.Size(207, 23);
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(241, 23);
             this.txtTenNguoiDung.TabIndex = 3;
             // 
             // Label4
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Label4.Location = new System.Drawing.Point(60, 166);
+            this.Label4.Location = new System.Drawing.Point(70, 204);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(65, 16);
             this.Label4.TabIndex = 13;
@@ -94,7 +97,7 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Label3.Location = new System.Drawing.Point(22, 134);
+            this.Label3.Location = new System.Drawing.Point(26, 165);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(103, 16);
             this.Label3.TabIndex = 10;
@@ -103,16 +106,17 @@
             // txtTenMayChu
             // 
             this.txtTenMayChu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenMayChu.Location = new System.Drawing.Point(135, 68);
+            this.txtTenMayChu.Location = new System.Drawing.Point(157, 84);
+            this.txtTenMayChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenMayChu.Name = "txtTenMayChu";
-            this.txtTenMayChu.Size = new System.Drawing.Size(207, 23);
+            this.txtTenMayChu.Size = new System.Drawing.Size(241, 23);
             this.txtTenMayChu.TabIndex = 1;
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Label5.Location = new System.Drawing.Point(36, 100);
+            this.Label5.Location = new System.Drawing.Point(42, 123);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(89, 16);
             this.Label5.TabIndex = 9;
@@ -122,7 +126,7 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Label2.Location = new System.Drawing.Point(56, 224);
+            this.Label2.Location = new System.Drawing.Point(65, 276);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(69, 16);
             this.Label2.TabIndex = 12;
@@ -132,7 +136,7 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Label1.Location = new System.Drawing.Point(38, 71);
+            this.Label1.Location = new System.Drawing.Point(44, 87);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(87, 16);
             this.Label1.TabIndex = 11;
@@ -143,9 +147,10 @@
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnHuyBo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnHuyBo.Location = new System.Drawing.Point(241, 8);
+            this.btnHuyBo.Location = new System.Drawing.Point(281, 10);
+            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(100, 23);
+            this.btnHuyBo.Size = new System.Drawing.Size(117, 28);
             this.btnHuyBo.TabIndex = 8;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.UseVisualStyleBackColor = true;
@@ -156,9 +161,10 @@
             this.btnKetNoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnKetNoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnKetNoi.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnKetNoi.Location = new System.Drawing.Point(134, 8);
+            this.btnKetNoi.Location = new System.Drawing.Point(156, 10);
+            this.btnKetNoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKetNoi.Name = "btnKetNoi";
-            this.btnKetNoi.Size = new System.Drawing.Size(100, 23);
+            this.btnKetNoi.Size = new System.Drawing.Size(117, 28);
             this.btnKetNoi.TabIndex = 7;
             this.btnKetNoi.Text = "Kết nối";
             this.btnKetNoi.UseVisualStyleBackColor = true;
@@ -169,9 +175,10 @@
             this.btnKiemTraKetNoi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnKiemTraKetNoi.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnKiemTraKetNoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnKiemTraKetNoi.Location = new System.Drawing.Point(135, 192);
+            this.btnKiemTraKetNoi.Location = new System.Drawing.Point(157, 236);
+            this.btnKiemTraKetNoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKiemTraKetNoi.Name = "btnKiemTraKetNoi";
-            this.btnKiemTraKetNoi.Size = new System.Drawing.Size(121, 23);
+            this.btnKiemTraKetNoi.Size = new System.Drawing.Size(141, 28);
             this.btnKiemTraKetNoi.TabIndex = 5;
             this.btnKiemTraKetNoi.Text = "Kiểm tra kết nối";
             this.btnKiemTraKetNoi.UseVisualStyleBackColor = true;
@@ -181,9 +188,10 @@
             // 
             this.cboCSDL.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboCSDL.FormattingEnabled = true;
-            this.cboCSDL.Location = new System.Drawing.Point(135, 221);
+            this.cboCSDL.Location = new System.Drawing.Point(157, 272);
+            this.cboCSDL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboCSDL.Name = "cboCSDL";
-            this.cboCSDL.Size = new System.Drawing.Size(207, 24);
+            this.cboCSDL.Size = new System.Drawing.Size(241, 24);
             this.cboCSDL.TabIndex = 6;
             // 
             // label6
@@ -194,7 +202,7 @@
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(381, 54);
+            this.label6.Size = new System.Drawing.Size(444, 66);
             this.label6.TabIndex = 19;
             this.label6.Text = "BÓI TÌNH DUYÊN QUA CHỈ TAY";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,9 +214,10 @@
             this.panel1.Controls.Add(this.btnHuyBo);
             this.panel1.Controls.Add(this.btnKetNoi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 286);
+            this.panel1.Location = new System.Drawing.Point(0, 352);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 44);
+            this.panel1.Size = new System.Drawing.Size(444, 54);
             this.panel1.TabIndex = 20;
             // 
             // lblKQKiemTra
@@ -216,7 +225,7 @@
             this.lblKQKiemTra.AutoSize = true;
             this.lblKQKiemTra.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblKQKiemTra.ForeColor = System.Drawing.Color.Green;
-            this.lblKQKiemTra.Location = new System.Drawing.Point(136, 248);
+            this.lblKQKiemTra.Location = new System.Drawing.Point(159, 305);
             this.lblKQKiemTra.Name = "lblKQKiemTra";
             this.lblKQKiemTra.Size = new System.Drawing.Size(102, 16);
             this.lblKQKiemTra.TabIndex = 12;
@@ -225,10 +234,10 @@
             // 
             // frmKetNoiCSDL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(381, 330);
+            this.ClientSize = new System.Drawing.Size(444, 406);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboCSDL);
             this.Controls.Add(this.cboKieuXacThuc);
@@ -243,8 +252,10 @@
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.btnKiemTraKetNoi);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKetNoiCSDL";
