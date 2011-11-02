@@ -39,6 +39,7 @@ namespace DuongTinhDuyen
             m_KetLuanCtrl.HienThiDataGridViewComboBoxColumn(colNoiDungKL);
             LayDsNutTiep();
             btnTiepTuc.Enabled = true;
+            btnKetThuc.Enabled = true;
             btnQuayLai.Enabled = false;
         }
         #endregion
@@ -136,8 +137,8 @@ namespace DuongTinhDuyen
                                 {
                                     dgvNut.Rows.Add();
                                     int rid = dgvNut.RowCount - 1;
-                                    dgvNut.Rows[rid].Cells[0].Value = Convert.ToInt32(strNut[i]) > 0 ? "Có" : "Không";
-                                    dgvNut.Rows[rid].Cells[1].Value = Math.Abs(Convert.ToInt32(strNut[i]));
+                                    dgvNut.Rows[rid].Cells[0].Value = d > 0 ? "Có" : "Không";
+                                    dgvNut.Rows[rid].Cells[1].Value = Math.Abs(d);
                                 }
                             }
                         }

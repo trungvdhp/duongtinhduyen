@@ -72,12 +72,16 @@ namespace DuongTinhDuyen
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            bindingNavigatorPositionItem.Focus();
             if (KiemTraTruocKhiLuu("colNoiDung") == true)
             {
-                bindingNavigatorPositionItem.Focus();
                 m_NutCtrl.LuuNut();
                 frmNut_Load(sender, e);
-                bindingNavigatorNut.BindingSource.MoveLast();
+                try
+                {
+                    bindingNavigatorNut.BindingSource.MoveLast();
+                }
+                catch { }
             }
         }
 
