@@ -97,7 +97,7 @@ namespace DuongTinhDuyen
             nguoiDungToolStripMenuItem.Visible = false;
             loaiNguoiDungToolStripMenuItem.Visible = false;
             toolStripSeparator9.Visible = false;
-            quanLyToolStripMenuItem.Visible = false;
+            bienTapToolStripMenuItem.Visible = false;
             chuyenGiaToolStripMenuItem.Visible = false;
         }
         private void QuyenNguoiDung()
@@ -108,7 +108,7 @@ namespace DuongTinhDuyen
             nguoiDungToolStripMenuItem.Visible = false;
             loaiNguoiDungToolStripMenuItem.Visible = false;
             toolStripSeparator9.Visible = false;
-            quanLyToolStripMenuItem.Visible = false;
+            bienTapToolStripMenuItem.Visible = false;
             chuyenGiaToolStripMenuItem.Visible = true;
         }
 
@@ -120,7 +120,7 @@ namespace DuongTinhDuyen
             nguoiDungToolStripMenuItem.Visible = true;
             loaiNguoiDungToolStripMenuItem.Visible = true;
             toolStripSeparator9.Visible = true;
-            quanLyToolStripMenuItem.Visible = true;
+            bienTapToolStripMenuItem.Visible = true;
             chuyenGiaToolStripMenuItem.Visible = true;
         }
 

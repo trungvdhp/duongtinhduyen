@@ -59,7 +59,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 419);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 516);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -69,8 +70,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvKetLuan);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 181);
-            this.splitContainer1.SplitterDistance = 400;
+            this.splitContainer1.Size = new System.Drawing.Size(933, 222);
+            this.splitContainer1.SplitterDistance = 466;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 6;
             this.splitContainer1.TabStop = false;
@@ -84,7 +85,7 @@
             this.dgvGiaThiet.BackgroundColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -96,10 +97,11 @@
             this.colNoiDungGiaThiet});
             this.dgvGiaThiet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGiaThiet.Location = new System.Drawing.Point(0, 0);
+            this.dgvGiaThiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvGiaThiet.Name = "dgvGiaThiet";
             this.dgvGiaThiet.ReadOnly = true;
             this.dgvGiaThiet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvGiaThiet.Size = new System.Drawing.Size(400, 181);
+            this.dgvGiaThiet.Size = new System.Drawing.Size(466, 222);
             this.dgvGiaThiet.TabIndex = 6;
             // 
             // colTienTo
@@ -135,7 +137,7 @@
             this.dgvKetLuan.BackgroundColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -147,10 +149,11 @@
             this.colHauTo});
             this.dgvKetLuan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKetLuan.Location = new System.Drawing.Point(0, 0);
+            this.dgvKetLuan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvKetLuan.Name = "dgvKetLuan";
             this.dgvKetLuan.ReadOnly = true;
             this.dgvKetLuan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvKetLuan.Size = new System.Drawing.Size(399, 181);
+            this.dgvKetLuan.Size = new System.Drawing.Size(466, 222);
             this.dgvKetLuan.TabIndex = 7;
             this.dgvKetLuan.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvKetLuan_DataError);
             // 
@@ -188,8 +191,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 419);
+            this.panel1.Size = new System.Drawing.Size(933, 516);
             this.panel1.TabIndex = 1;
             // 
             // dgvNut
@@ -203,7 +207,7 @@
             this.dgvNut.BackgroundColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -213,11 +217,12 @@
             this.dgvNut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTienTo1,
             this.colGiaThiet});
-            this.dgvNut.Location = new System.Drawing.Point(0, 57);
+            this.dgvNut.Location = new System.Drawing.Point(0, 70);
+            this.dgvNut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvNut.Name = "dgvNut";
             this.dgvNut.ReadOnly = true;
             this.dgvNut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvNut.Size = new System.Drawing.Size(800, 315);
+            this.dgvNut.Size = new System.Drawing.Size(933, 388);
             this.dgvNut.TabIndex = 5;
             // 
             // colTienTo1
@@ -248,9 +253,10 @@
             // 
             this.btnLamLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLamLai.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLamLai.Location = new System.Drawing.Point(244, 378);
+            this.btnLamLai.Location = new System.Drawing.Point(285, 465);
+            this.btnLamLai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLamLai.Name = "btnLamLai";
-            this.btnLamLai.Size = new System.Drawing.Size(75, 23);
+            this.btnLamLai.Size = new System.Drawing.Size(87, 28);
             this.btnLamLai.TabIndex = 4;
             this.btnLamLai.Text = "|<< &Làm lại";
             this.btnLamLai.UseVisualStyleBackColor = true;
@@ -260,9 +266,10 @@
             // 
             this.btnKetThuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnKetThuc.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnKetThuc.Location = new System.Drawing.Point(487, 378);
+            this.btnKetThuc.Location = new System.Drawing.Point(568, 465);
+            this.btnKetThuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKetThuc.Name = "btnKetThuc";
-            this.btnKetThuc.Size = new System.Drawing.Size(75, 23);
+            this.btnKetThuc.Size = new System.Drawing.Size(87, 28);
             this.btnKetThuc.TabIndex = 3;
             this.btnKetThuc.Text = "&Kết thúc >>|";
             this.btnKetThuc.UseVisualStyleBackColor = true;
@@ -272,9 +279,10 @@
             // 
             this.btnQuayLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnQuayLai.Location = new System.Drawing.Point(325, 378);
+            this.btnQuayLai.Location = new System.Drawing.Point(379, 465);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(75, 23);
+            this.btnQuayLai.Size = new System.Drawing.Size(87, 28);
             this.btnQuayLai.TabIndex = 2;
             this.btnQuayLai.Text = "|< &Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
@@ -285,9 +293,10 @@
             this.btnTiepTuc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTiepTuc.Enabled = false;
             this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnTiepTuc.Location = new System.Drawing.Point(406, 378);
+            this.btnTiepTuc.Location = new System.Drawing.Point(474, 465);
+            this.btnTiepTuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTiepTuc.Name = "btnTiepTuc";
-            this.btnTiepTuc.Size = new System.Drawing.Size(75, 23);
+            this.btnTiepTuc.Size = new System.Drawing.Size(87, 28);
             this.btnTiepTuc.TabIndex = 1;
             this.btnTiepTuc.Text = "&Tiếp tục >|";
             this.btnTiepTuc.UseVisualStyleBackColor = true;
@@ -301,20 +310,22 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 54);
+            this.label1.Size = new System.Drawing.Size(933, 66);
             this.label1.TabIndex = 7;
             this.label1.Text = "BÓI TÌNH DUYÊN QUA CHỈ TAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmChuyenGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(933, 738);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmChuyenGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CHUYÊN GIA";

@@ -46,9 +46,10 @@
             // 
             this.btnHuyBo.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnHuyBo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnHuyBo.Location = new System.Drawing.Point(263, 221);
+            this.btnHuyBo.Location = new System.Drawing.Point(291, 270);
+            this.btnHuyBo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(83, 23);
+            this.btnHuyBo.Size = new System.Drawing.Size(97, 28);
             this.btnHuyBo.TabIndex = 5;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@
             // 
             this.btnDongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDongY.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDongY.Location = new System.Drawing.Point(161, 221);
+            this.btnDongY.Location = new System.Drawing.Point(172, 270);
+            this.btnDongY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDongY.Name = "btnDongY";
-            this.btnDongY.Size = new System.Drawing.Size(83, 23);
+            this.btnDongY.Size = new System.Drawing.Size(97, 28);
             this.btnDongY.TabIndex = 4;
             this.btnDongY.Text = "Đồng ý";
             this.btnDongY.UseVisualStyleBackColor = true;
@@ -69,18 +71,19 @@
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(161, 123);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(172, 151);
+            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhauMoi.MaxLength = 20;
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(185, 23);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(215, 23);
             this.txtMatKhauMoi.TabIndex = 2;
             // 
             // lblMatKhauMoi
             // 
             this.lblMatKhauMoi.AutoSize = true;
             this.lblMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMatKhauMoi.Location = new System.Drawing.Point(17, 126);
+            this.lblMatKhauMoi.Location = new System.Drawing.Point(24, 155);
             this.lblMatKhauMoi.Name = "lblMatKhauMoi";
             this.lblMatKhauMoi.Size = new System.Drawing.Size(90, 16);
             this.lblMatKhauMoi.TabIndex = 7;
@@ -90,11 +93,12 @@
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMatKhauCu.Location = new System.Drawing.Point(161, 74);
+            this.txtMatKhauCu.Location = new System.Drawing.Point(172, 91);
+            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatKhauCu.MaxLength = 30;
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
-            this.txtMatKhauCu.Size = new System.Drawing.Size(185, 23);
+            this.txtMatKhauCu.Size = new System.Drawing.Size(215, 23);
             this.txtMatKhauCu.TabIndex = 1;
             // 
             // label1
@@ -105,7 +109,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 54);
+            this.label1.Size = new System.Drawing.Size(424, 66);
             this.label1.TabIndex = 6;
             this.label1.Text = "BÓI TÌNH DUYÊN QUA CHỈ TAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,7 +118,7 @@
             // 
             this.lblMatKhauCu.AutoSize = true;
             this.lblMatKhauCu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMatKhauCu.Location = new System.Drawing.Point(17, 77);
+            this.lblMatKhauCu.Location = new System.Drawing.Point(24, 95);
             this.lblMatKhauCu.Name = "lblMatKhauCu";
             this.lblMatKhauCu.Size = new System.Drawing.Size(82, 16);
             this.lblMatKhauCu.TabIndex = 5;
@@ -125,7 +129,7 @@
             // 
             this.lblNhapLaiMatKhauMoi.AutoSize = true;
             this.lblNhapLaiMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblNhapLaiMatKhauMoi.Location = new System.Drawing.Point(17, 174);
+            this.lblNhapLaiMatKhauMoi.Location = new System.Drawing.Point(24, 214);
             this.lblNhapLaiMatKhauMoi.Name = "lblNhapLaiMatKhauMoi";
             this.lblNhapLaiMatKhauMoi.Size = new System.Drawing.Size(141, 16);
             this.lblNhapLaiMatKhauMoi.TabIndex = 7;
@@ -135,11 +139,12 @@
             // txtNhapLaiMatKhauMoi
             // 
             this.txtNhapLaiMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNhapLaiMatKhauMoi.Location = new System.Drawing.Point(161, 171);
+            this.txtNhapLaiMatKhauMoi.Location = new System.Drawing.Point(172, 210);
+            this.txtNhapLaiMatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhapLaiMatKhauMoi.MaxLength = 20;
             this.txtNhapLaiMatKhauMoi.Name = "txtNhapLaiMatKhauMoi";
             this.txtNhapLaiMatKhauMoi.PasswordChar = '*';
-            this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(185, 23);
+            this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(215, 23);
             this.txtNhapLaiMatKhauMoi.TabIndex = 3;
             this.txtNhapLaiMatKhauMoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNhapLaiMatKhauMoi_KeyDown);
             // 
@@ -148,7 +153,7 @@
             this.lblLoiMatKhauCu.AutoSize = true;
             this.lblLoiMatKhauCu.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblLoiMatKhauCu.ForeColor = System.Drawing.Color.Red;
-            this.lblLoiMatKhauCu.Location = new System.Drawing.Point(166, 100);
+            this.lblLoiMatKhauCu.Location = new System.Drawing.Point(175, 123);
             this.lblLoiMatKhauCu.Name = "lblLoiMatKhauCu";
             this.lblLoiMatKhauCu.Size = new System.Drawing.Size(0, 13);
             this.lblLoiMatKhauCu.TabIndex = 12;
@@ -159,7 +164,7 @@
             this.lblLoiMatKhauMoi.AutoSize = true;
             this.lblLoiMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblLoiMatKhauMoi.ForeColor = System.Drawing.Color.Red;
-            this.lblLoiMatKhauMoi.Location = new System.Drawing.Point(166, 148);
+            this.lblLoiMatKhauMoi.Location = new System.Drawing.Point(175, 182);
             this.lblLoiMatKhauMoi.Name = "lblLoiMatKhauMoi";
             this.lblLoiMatKhauMoi.Size = new System.Drawing.Size(0, 13);
             this.lblLoiMatKhauMoi.TabIndex = 13;
@@ -170,7 +175,7 @@
             this.lblLoiNhapLaiMatKhauMoi.AutoSize = true;
             this.lblLoiNhapLaiMatKhauMoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblLoiNhapLaiMatKhauMoi.ForeColor = System.Drawing.Color.Red;
-            this.lblLoiNhapLaiMatKhauMoi.Location = new System.Drawing.Point(166, 197);
+            this.lblLoiNhapLaiMatKhauMoi.Location = new System.Drawing.Point(175, 242);
             this.lblLoiNhapLaiMatKhauMoi.Name = "lblLoiNhapLaiMatKhauMoi";
             this.lblLoiNhapLaiMatKhauMoi.Size = new System.Drawing.Size(0, 13);
             this.lblLoiNhapLaiMatKhauMoi.TabIndex = 14;
@@ -178,10 +183,10 @@
             // 
             // frmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(375, 262);
+            this.ClientSize = new System.Drawing.Size(424, 320);
             this.Controls.Add(this.lblLoiNhapLaiMatKhauMoi);
             this.Controls.Add(this.lblLoiMatKhauMoi);
             this.Controls.Add(this.lblLoiMatKhauCu);
@@ -194,7 +199,9 @@
             this.Controls.Add(this.txtMatKhauCu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMatKhauCu);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDoiMatKhau";
