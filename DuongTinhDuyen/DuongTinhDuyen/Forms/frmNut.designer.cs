@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNut));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNut = new System.Windows.Forms.DataGridView();
+            this.colMaNut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorNut = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,8 +50,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorRefreshItem = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.colMaNut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorNut)).BeginInit();
             this.bindingNavigatorNut.SuspendLayout();
@@ -62,14 +62,14 @@
             this.dgvNut.AllowUserToResizeRows = false;
             this.dgvNut.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNut.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNut.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNut,
@@ -81,6 +81,27 @@
             this.dgvNut.Size = new System.Drawing.Size(600, 269);
             this.dgvNut.TabIndex = 66;
             this.dgvNut.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvNut_DataError);
+            // 
+            // colMaNut
+            // 
+            this.colMaNut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colMaNut.DataPropertyName = "MaNut";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colMaNut.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colMaNut.FillWeight = 60F;
+            this.colMaNut.HeaderText = "Mã nút";
+            this.colMaNut.MaxInputLength = 6;
+            this.colMaNut.Name = "colMaNut";
+            this.colMaNut.ReadOnly = true;
+            this.colMaNut.Width = 60;
+            // 
+            // colNoiDung
+            // 
+            this.colNoiDung.DataPropertyName = "NoiDung";
+            this.colNoiDung.FillWeight = 98.47716F;
+            this.colNoiDung.HeaderText = "Nội dung";
+            this.colNoiDung.MaxInputLength = 100;
+            this.colNoiDung.Name = "colNoiDung";
             // 
             // bindingNavigatorSeparator2
             // 
@@ -124,7 +145,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(47, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
             this.bindingNavigatorCountItem.Text = "của {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -227,27 +248,6 @@
             this.saveToolStripButton.Size = new System.Drawing.Size(23, 28);
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
-            // 
-            // colMaNut
-            // 
-            this.colMaNut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colMaNut.DataPropertyName = "MaNut";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colMaNut.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colMaNut.FillWeight = 60F;
-            this.colMaNut.HeaderText = "Mã nút";
-            this.colMaNut.MaxInputLength = 6;
-            this.colMaNut.Name = "colMaNut";
-            this.colMaNut.ReadOnly = true;
-            this.colMaNut.Width = 60;
-            // 
-            // colNoiDung
-            // 
-            this.colNoiDung.DataPropertyName = "NoiDung";
-            this.colNoiDung.FillWeight = 98.47716F;
-            this.colNoiDung.HeaderText = "Nội dung";
-            this.colNoiDung.MaxInputLength = 100;
-            this.colNoiDung.Name = "colNoiDung";
             // 
             // frmNut
             // 
