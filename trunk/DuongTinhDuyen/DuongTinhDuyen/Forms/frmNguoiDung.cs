@@ -16,17 +16,23 @@ namespace DuongTinhDuyen
         NguoiDungCtrl m_NguoiDungCtrl = new NguoiDungCtrl();
         LoaiNguoiDungCtrl m_LoaiNguoiDungCtrl = new LoaiNguoiDungCtrl();
         #endregion
+
+        #region Constructor
         public frmNguoiDung()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Load
         private void frmNguoiDung_Load(object sender, EventArgs e)
         {
             m_LoaiNguoiDungCtrl.HienThiDataGridViewComboBoxColumn(colMaLoai);
             m_NguoiDungCtrl.HienThi(dgvNguoiDung, bindingNavigatorNguoiDung);
         }
+        #endregion
 
+        #region BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dgvNguoiDung.RowCount > 0)
@@ -54,6 +60,11 @@ namespace DuongTinhDuyen
             bindingNavigatorNguoiDung.BindingSource.MoveLast();
             if (dgvNguoiDung.RowCount > 0)
                 bindingNavigatorDeleteItem.Enabled = true;
+        }
+
+        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
+        {
+            frmNguoiDung_Load(sender, e);
         }
 
         public Boolean KiemTraTruocKhiLuu(String cellString)
@@ -85,20 +96,13 @@ namespace DuongTinhDuyen
                 m_NguoiDungCtrl.LuuNguoiDung();
             }
         }
+        #endregion
 
+        #region DataError event
         private void dgvNguoiDung_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-
-        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
-        {
-            frmNguoiDung_Load(sender, e);
-        }
-
-
-
-
-
+        #endregion
     }
 }
