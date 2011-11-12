@@ -60,6 +60,11 @@ namespace DuongTinhDuyen
             bindingNavigatorLoaiNguoiDung.BindingSource.MoveLast();
         }
 
+        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
+        {
+            frmLoaiNguoiDung_Load(sender, e);
+        }
+
         public Boolean KiemTraTruocKhiLuu(String cellString)
         {
             foreach (DataGridViewRow row in dgvLoaiNguoiDung.Rows)
@@ -94,10 +99,5 @@ namespace DuongTinhDuyen
             e.Cancel = true;
         }
         #endregion
-
-        private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
-        {
-            frmLoaiNguoiDung_Load(sender, e);
-        }
     }
 }
