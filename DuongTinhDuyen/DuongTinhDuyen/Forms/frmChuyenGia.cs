@@ -46,7 +46,7 @@ namespace DuongTinhDuyen
         #region DataError event
         private void dgvLuat_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            e.Cancel = true;
+
         }
         
         private void dgvGiaThiet_DataError(object sender, DataGridViewDataErrorEventArgs e)
